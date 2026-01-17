@@ -1,75 +1,163 @@
-import {
-  PieChart,
-  Pie,
-  Cell,
-  ResponsiveContainer,
-  Tooltip,
-} from "recharts";
+import { useEffect, useState } from "react";
+import { addCompleted, addInProgress, addGrade } from "../../api/dashboard";
 
-export default function CreditsDistributionCard({ requirements }) {
-  const totalDone = requirements.reduce((sum, r) => sum + r.done, 0);
+const GRADES = ["A+", "A", "A-", "B+", "B", "C+", "C", "D+", "D", "E", "F", "ABS", "EIN"];
 
-  const data = requirements.map((r) => ({
-    name: r.label,
-    value: r.done,
-    req: r.req,
-  }));
+export default function CourseActionsCard({
+  availableCourses = [],
+  completedCourses = [],
+  onUpdated,
+}) {
+  const [course, setCourse] = useState("");
+  const [inProgCourse, setInProgCourse] = useState("");
+  const [gradeCourse, setGradeCourse] = useState("");
+  const [grade, setGrade] = useState("A");
+  const [status, setStatus] = useState("");
 
-  const COLORS = ["#3b82f6", "#a855f7", "#22c55e", "#f97316"];
+  // Keep selections valid when backend data changes (after fetch / after updates)
+  useEffect(() => {
+    // Completed dropdown
+    if (!completedCourses.includes(gradeCourse)) {
+      setGradeCourse(completedCourses[0] || "");
+    }
+
+    // Available dropdowns
+    if (!availableCourses.includes(course)) {
+      setCourse(availableCourses[0] || "");
+    }
+    if (!availableCourses.includes(inProgCourse)) {
+      setInProgCourse(availableCourses[0] || "");
+    }
+  }, [availableCourses, completedCourses, course, inProgCourse, gradeCourse]);
+
+  async function run(action) {
+    try {
+      setStatus("Saving...");
+      await action();
+      setStatus("Saved ✅");
+      await onUpdated?.(); // wait for refresh so dropdowns update cleanly
+      // optional: clear status after a moment
+      setTimeout(() => setStatus(""), 1200);
+    } catch (e) {
+      setStatus(e?.message || "Error");
+    }
+  }
 
   return (
     <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
       <div className="flex items-center gap-3">
-        <span className="text-xl">📊</span>
-        <h3 className="text-xl font-semibold text-gray-900">
-          Credits Distribution
-        </h3>
+        <span className="text-xl">➕</span>
+        <div>
+          <h3 className="text-xl font-semibold text-gray-900">Update Courses</h3>
+          <p className="mt-1 text-sm text-gray-500">Add completed/in-progress courses and grades</p>
+        </div>
       </div>
 
-      {/* Chart */}
-      <div className="mt-8 h-56">
-        <ResponsiveContainer width="100%" height="100%">
-          <PieChart>
-            <Pie
-              data={data}
-              dataKey="value"
-              innerRadius={65}
-              outerRadius={95}
-              paddingAngle={2}
-              stroke="white"
-              strokeWidth={2}
+      <div className="mt-6 space-y-6">
+        {/* Add completed */}
+        <div>
+          <div className="text-sm font-semibold text-gray-900">Mark as completed</div>
+          <div className="mt-2 flex gap-2">
+            <select
+              className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm"
+              value={course}
+              onChange={(e) => setCourse(e.target.value)}
+              disabled={availableCourses.length === 0}
             >
-              {data.map((_, i) => (
-                <Cell key={i} fill={COLORS[i % COLORS.length]} />
+              {availableCourses.length === 0 ? (
+                <option value="">No courses available</option>
+              ) : (
+                availableCourses.map((c) => (
+                  <option key={c} value={c}>
+                    {c}
+                  </option>
+                ))
+              )}
+            </select>
+            <button
+              className="rounded-xl bg-gray-900 px-4 py-2 text-sm font-semibold text-white hover:bg-gray-800 disabled:opacity-50"
+              onClick={() => run(() => addCompleted(course))}
+              disabled={!course}
+            >
+              Add
+            </button>
+          </div>
+        </div>
+
+        {/* Add in progress */}
+        <div>
+          <div className="text-sm font-semibold text-gray-900">Mark as in progress</div>
+          <div className="mt-2 flex gap-2">
+            <select
+              className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm"
+              value={inProgCourse}
+              onChange={(e) => setInProgCourse(e.target.value)}
+              disabled={availableCourses.length === 0}
+            >
+              {availableCourses.length === 0 ? (
+                <option value="">No courses available</option>
+              ) : (
+                availableCourses.map((c) => (
+                  <option key={c} value={c}>
+                    {c}
+                  </option>
+                ))
+              )}
+            </select>
+            <button
+              className="rounded-xl bg-gray-900 px-4 py-2 text-sm font-semibold text-white hover:bg-gray-800 disabled:opacity-50"
+              onClick={() => run(() => addInProgress(inProgCourse))}
+              disabled={!inProgCourse}
+            >
+              Add
+            </button>
+          </div>
+        </div>
+
+        {/* Add grade */}
+        <div>
+          <div className="text-sm font-semibold text-gray-900">Set grade</div>
+          <div className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-3">
+            <select
+              className="rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm"
+              value={gradeCourse}
+              onChange={(e) => setGradeCourse(e.target.value)}
+              disabled={completedCourses.length === 0}
+            >
+              {completedCourses.length === 0 ? (
+                <option value="">No completed courses</option>
+              ) : (
+                completedCourses.map((c) => (
+                  <option key={c} value={c}>
+                    {c}
+                  </option>
+                ))
+              )}
+            </select>
+
+            <select
+              className="rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm"
+              value={grade}
+              onChange={(e) => setGrade(e.target.value)}
+            >
+              {GRADES.map((g) => (
+                <option key={g} value={g}>
+                  {g}
+                </option>
               ))}
-            </Pie>
-            <Tooltip />
-          </PieChart>
-        </ResponsiveContainer>
-      </div>
+            </select>
 
-        {/* Legend */}
-      <div className="mt-6 grid grid-cols-2 gap-x-6 gap-y-4 text-sm">
-        {requirements.map((r, i) => {
-          const pct = totalDone
-            ? Math.round((r.done / totalDone) * 100)
-            : 0;
+            <button
+              className="rounded-xl bg-gray-900 px-4 py-2 text-sm font-semibold text-white hover:bg-gray-800 disabled:opacity-50"
+              onClick={() => run(() => addGrade(gradeCourse, grade))}
+              disabled={!gradeCourse}
+            >
+              Save
+            </button>
+          </div>
+        </div>
 
-          return (
-            <div key={r.label} className="flex items-start gap-3">
-              <span
-                className="mt-1 h-3 w-3 rounded-full"
-                style={{ backgroundColor: COLORS[i % COLORS.length] }}
-              />
-              <div>
-                <div className="font-medium text-gray-900">{r.label}</div>
-                <div className="text-gray-500">
-                  {r.done}/{r.req} ({pct}%)
-                </div>
-              </div>
-            </div>
-          );
-        })}
+        {status ? <div className="text-sm text-gray-500">{status}</div> : null}
       </div>
     </div>
   );
