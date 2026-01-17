@@ -12,6 +12,11 @@ pip install -r requirements.txt
 ### code here
 from pydantic import BaseModel
 
+# prevent 404 in browser
+from fastapi.responses import FileResponse
+import os
+
+
 
 # api stuff
 from fastapi import FastAPI
@@ -299,3 +304,16 @@ def api_add_grade(payload: GradePayload):
 @app.get("/health")
 def health():
     return {"status": "ok"}
+
+
+@app.get("/")
+def root():
+    return {"status": "Backend is running. Use /api/dashboard or /api/degree_requirements."}
+
+@app.get("/favicon.ico")
+def favicon():
+    # put a favicon.ico file in the backend folder if you want an actual icon
+    path = os.path.join(os.path.dirname(__file__), "favicon.ico")
+    if os.path.exists(path):
+        return FileResponse(path)
+    return {}
