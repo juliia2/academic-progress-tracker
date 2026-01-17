@@ -1,4 +1,73 @@
+''' put this into terminal ONCE
+python -m venv venv
+# activate virtual environment:
+# Windows: venv\Scripts\activate
+# Mac/Linux: source venv/bin/activate
+pip install -r requirements.txt
+
+'''
+# to run: uvicorn main:app --reload --port 5000
+
+
 ### code here
+from typing import Dict
+
+
+# api stuff
+from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
+
+app = FastAPI()
+
+
+# allow React dev server to access FastAPI
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:5173"],  # Vite default port
+    allow_methods=["*"],
+    allow_headers=["*"]
+)
+
+## >> app.jsx for later
+'''
+import { useEffect, useState } from "react";
+
+function App() {
+  const [items, setItems] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/api/data")
+      .then(res => res.json())
+      .then(data => setItems(data.items));
+  }, []);
+
+  const handleUpdate = () => {
+    fetch("http://localhost:5000/api/update", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ items })
+    })
+    .then(res => res.json())
+    .then(console.log);
+  };
+
+  return (
+    <div>
+      <ul>
+        {items.map((i, idx) => <li key={idx}>{i}</li>)}
+      </ul>
+      <button onClick={handleUpdate}>Send to Python</button>
+    </div>
+  );
+}
+
+export default App;
+
+'''
+
+# to run: uvicorn main:app --reload --port 5000
+
+
 #HARDCODING FOR DEMO
 
 required_courses=['ENG 1112', 'ITI 1100', 'ITI 1120', 
@@ -19,6 +88,9 @@ requirements = {
     "to do": []
 }
 
+course_grades = {}
+
+# FUNCTIONS
 
 def get_requirements(requirements):
     requirements["to do"] = [course for course in required_courses if course not in requirements["completed"] and course not in requirements["in_progress"]]
@@ -94,7 +166,31 @@ def calculate_cgpa(course_grades):
     return round(gpa, 2)
 
 
-def main():
-    print("Academic Progress Tracker Backend")
 
-main()
+# ---------- FASTAPI ENDPOINTS ----------
+@app.get("/api/requirements")
+def api_get_requirements():
+    return get_requirements(requirements)
+
+@app.post("/api/add_completed")
+def api_add_completed(payload: Dict):
+    course = payload.get("course")
+    add_completed_course(requirements, course)
+    return get_requirements(requirements)
+
+@app.post("/api/add_in_progress")
+def api_add_in_progress(payload: Dict):
+    course = payload.get("course")
+    add_in_progress_course(requirements, course)
+    return get_requirements(requirements)
+
+@app.get("/api/cgpa")
+def api_get_cgpa():
+    return {"cgpa": calculate_cgpa(course_grades)}
+
+@app.post("/api/add_grade")
+def api_add_grade(payload: Dict):
+    course = payload.get("course")
+    grade = payload.get("grade")
+    add_course_grade(course_grades, course, grade)
+    return {"cgpa": calculate_cgpa(course_grades)}
