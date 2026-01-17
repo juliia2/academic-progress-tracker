@@ -79,18 +79,22 @@ export default function DashboardPage() {
         </section>
 
 
-        {/* Top grid - Course Actions and Credits Distribution side by side */}
+         {/* Top grid - Course Actions and Credits Distribution side by side */}
         <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
           <section id="update-courses" className="flex scroll-mt-24 lg:col-span-1">
-            <CourseActionsCard
-              availableCourses={ui.availableCourses || []}
-              completedCourses={ui.completedCourses || []}
-              onUpdated={load}
-            />
+            <div className="h-full w-full">
+              <CourseActionsCard
+                availableCourses={ui.availableCourses || []}
+                completedCourses={ui.completedCourses || []}
+                onUpdated={load}
+              />
+            </div>
           </section>
 
           <section id="distribution" className="flex scroll-mt-24 lg:col-span-1">
-            <CreditsDistributionCard requirements={requirements} />
+            <div className="h-full w-full">
+              <CreditsDistributionCard requirements={requirements} />
+            </div>
           </section>
         </div>
 
