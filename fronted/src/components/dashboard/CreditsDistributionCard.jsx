@@ -1,163 +1,140 @@
-import { useEffect, useState } from "react";
-import { addCompleted, addInProgress, addGrade } from "../../api/dashboard";
+import React, { useMemo } from "react";
+import {
+  ResponsiveContainer,
+  PieChart,
+  Pie,
+  Cell,
+  Tooltip,
+} from "recharts";
 
-const GRADES = ["A+", "A", "A-", "B+", "B", "C+", "C", "D+", "D", "E", "F", "ABS", "EIN"];
+const COLORS = ["#3b82f6", "#a855f7", "#22c55e", "#f97316"]; // blue, purple, green, orange
 
-export default function CourseActionsCard({
-  availableCourses = [],
-  completedCourses = [],
-  onUpdated,
-}) {
-  const [course, setCourse] = useState("");
-  const [inProgCourse, setInProgCourse] = useState("");
-  const [gradeCourse, setGradeCourse] = useState("");
-  const [grade, setGrade] = useState("A");
-  const [status, setStatus] = useState("");
+function pct(done, req) {
+  if (!req || req <= 0) return 0;
+  return Math.round((done / req) * 100);
+}
 
-  // Keep selections valid when backend data changes (after fetch / after updates)
-  useEffect(() => {
-    // Completed dropdown
-    if (!completedCourses.includes(gradeCourse)) {
-      setGradeCourse(completedCourses[0] || "");
-    }
+const CustomTooltip = ({ active, payload }) => {
+  if (!active || !payload?.length) return null;
 
-    // Available dropdowns
-    if (!availableCourses.includes(course)) {
-      setCourse(availableCourses[0] || "");
-    }
-    if (!availableCourses.includes(inProgCourse)) {
-      setInProgCourse(availableCourses[0] || "");
-    }
-  }, [availableCourses, completedCourses, course, inProgCourse, gradeCourse]);
+  const d = payload[0].payload;
+  const done = Number(d.done ?? 0);
+  const req = Number(d.req ?? 0);
 
-  async function run(action) {
-    try {
-      setStatus("Saving...");
-      await action();
-      setStatus("Saved ✅");
-      await onUpdated?.(); // wait for refresh so dropdowns update cleanly
-      // optional: clear status after a moment
-      setTimeout(() => setStatus(""), 1200);
-    } catch (e) {
-      setStatus(e?.message || "Error");
-    }
+  return (
+    <div className="rounded-2xl border border-gray-200 bg-white px-5 py-4 shadow-lg">
+      <div className="text-lg font-extrabold text-gray-900">{d.label}</div>
+      <div className="mt-1 text-sm text-gray-600">
+        Completed: <span className="font-semibold text-gray-900">{done}</span> credits
+      </div>
+      <div className="text-sm text-gray-600">
+        Required: <span className="font-semibold text-gray-900">{req}</span> credits
+      </div>
+      <div className="text-sm text-gray-600">
+        Progress: <span className="font-semibold text-gray-900">{pct(done, req)}%</span>
+      </div>
+    </div>
+  );
+};
+
+export default function CreditsDistributionCard({ requirements = [] }) {
+  const data = useMemo(() => {
+    const list = Array.isArray(requirements) ? requirements : [];
+
+    return list.map((r, i) => {
+      const req = Number(r.req ?? 0);
+      const done = Number(r.done ?? 0);
+      return {
+        label: r.label ?? `Category ${i + 1}`,
+        req,
+        done,
+        // slice sizes based on required credits distribution
+        value: Math.max(0, req),
+      };
+    });
+  }, [requirements]);
+
+  const totals = useMemo(() => {
+    const totalReq = data.reduce((s, d) => s + (Number.isFinite(d.req) ? d.req : 0), 0);
+    const totalDone = data.reduce((s, d) => s + (Number.isFinite(d.done) ? d.done : 0), 0);
+    const totalPct = totalReq > 0 ? Math.round((totalDone / totalReq) * 100) : 0;
+    return { totalReq, totalDone, totalPct };
+  }, [data]);
+
+  if (totals.totalReq <= 0) {
+    return (
+      <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+        <div className="flex items-center gap-3">
+          <span className="text-xl">📊</span>
+          <h3 className="text-lg font-semibold text-gray-900">Credits Distribution</h3>
+        </div>
+        <div className="mt-4 text-sm text-gray-500">No requirements data yet.</div>
+      </div>
+    );
   }
 
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
+    <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
       <div className="flex items-center gap-3">
-        <span className="text-xl">➕</span>
-        <div>
-          <h3 className="text-xl font-semibold text-gray-900">Update Courses</h3>
-          <p className="mt-1 text-sm text-gray-500">Add completed/in-progress courses and grades</p>
+        <span className="text-xl">📊</span>
+        <h3 className="text-lg font-semibold text-gray-900">Credits Distribution</h3>
+      </div>
+
+      {/* Chart */}
+      <div className="relative mt-4 h-80">
+        <ResponsiveContainer width="100%" height="100%">
+          <PieChart>
+            <Tooltip content={<CustomTooltip />} />
+            <Pie
+              data={data}
+              dataKey="value"
+              cx="50%"
+              cy="48%"
+              innerRadius="62%"
+              outerRadius="82%"
+              paddingAngle={2}
+              isAnimationActive={false}
+            >
+              {data.map((_, idx) => (
+                <Cell key={idx} fill={COLORS[idx % COLORS.length]} />
+              ))}
+            </Pie>
+          </PieChart>
+        </ResponsiveContainer>
+
+        {/* Center KPI */}
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
+          <div className="text-center">
+            <div className="text-3xl font-extrabold text-gray-900">
+              {totals.totalPct}%
+            </div>
+            <div className="mt-1 text-sm text-gray-500">
+              {totals.totalDone} / {totals.totalReq} credits
+            </div>
+          </div>
         </div>
       </div>
 
-      <div className="mt-6 space-y-6">
-        {/* Add completed */}
-        <div>
-          <div className="text-sm font-semibold text-gray-900">Mark as completed</div>
-          <div className="mt-2 flex gap-2">
-            <select
-              className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm"
-              value={course}
-              onChange={(e) => setCourse(e.target.value)}
-              disabled={availableCourses.length === 0}
-            >
-              {availableCourses.length === 0 ? (
-                <option value="">No courses available</option>
-              ) : (
-                availableCourses.map((c) => (
-                  <option key={c} value={c}>
-                    {c}
-                  </option>
-                ))
-              )}
-            </select>
-            <button
-              className="rounded-xl bg-gray-900 px-4 py-2 text-sm font-semibold text-white hover:bg-gray-800 disabled:opacity-50"
-              onClick={() => run(() => addCompleted(course))}
-              disabled={!course}
-            >
-              Add
-            </button>
-          </div>
-        </div>
+      {/* Legend */}
+      <div className="mt-2 grid grid-cols-2 gap-x-6 gap-y-5">
+        {data.map((d, idx) => {
+          const color = COLORS[idx % COLORS.length];
+          const p = pct(d.done, d.req);
 
-        {/* Add in progress */}
-        <div>
-          <div className="text-sm font-semibold text-gray-900">Mark as in progress</div>
-          <div className="mt-2 flex gap-2">
-            <select
-              className="w-full rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm"
-              value={inProgCourse}
-              onChange={(e) => setInProgCourse(e.target.value)}
-              disabled={availableCourses.length === 0}
-            >
-              {availableCourses.length === 0 ? (
-                <option value="">No courses available</option>
-              ) : (
-                availableCourses.map((c) => (
-                  <option key={c} value={c}>
-                    {c}
-                  </option>
-                ))
-              )}
-            </select>
-            <button
-              className="rounded-xl bg-gray-900 px-4 py-2 text-sm font-semibold text-white hover:bg-gray-800 disabled:opacity-50"
-              onClick={() => run(() => addInProgress(inProgCourse))}
-              disabled={!inProgCourse}
-            >
-              Add
-            </button>
-          </div>
-        </div>
-
-        {/* Add grade */}
-        <div>
-          <div className="text-sm font-semibold text-gray-900">Set grade</div>
-          <div className="mt-2 grid grid-cols-1 gap-2 sm:grid-cols-3">
-            <select
-              className="rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm"
-              value={gradeCourse}
-              onChange={(e) => setGradeCourse(e.target.value)}
-              disabled={completedCourses.length === 0}
-            >
-              {completedCourses.length === 0 ? (
-                <option value="">No completed courses</option>
-              ) : (
-                completedCourses.map((c) => (
-                  <option key={c} value={c}>
-                    {c}
-                  </option>
-                ))
-              )}
-            </select>
-
-            <select
-              className="rounded-xl border border-gray-200 bg-white px-3 py-2 text-sm"
-              value={grade}
-              onChange={(e) => setGrade(e.target.value)}
-            >
-              {GRADES.map((g) => (
-                <option key={g} value={g}>
-                  {g}
-                </option>
-              ))}
-            </select>
-
-            <button
-              className="rounded-xl bg-gray-900 px-4 py-2 text-sm font-semibold text-white hover:bg-gray-800 disabled:opacity-50"
-              onClick={() => run(() => addGrade(gradeCourse, grade))}
-              disabled={!gradeCourse}
-            >
-              Save
-            </button>
-          </div>
-        </div>
-
-        {status ? <div className="text-sm text-gray-500">{status}</div> : null}
+          return (
+            <div key={d.label} className="flex items-start gap-3">
+              <span className="mt-2 h-4 w-4 rounded-full" style={{ backgroundColor: color }} />
+              <div className="min-w-0">
+                <div className="truncate text-base font-extrabold text-gray-900">
+                  {d.label}
+                </div>
+                <div className="text-sm text-gray-500">
+                  {d.done}/{d.req} ({p}%)
+                </div>
+              </div>
+            </div>
+          );
+        })}
       </div>
     </div>
   );

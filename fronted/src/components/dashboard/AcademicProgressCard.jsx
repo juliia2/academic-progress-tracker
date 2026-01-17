@@ -3,21 +3,20 @@ import Badge from "./ui/Badge";
 import ProgressBar from "./ui/ProgressBar";
 import RequirementRow from "./RequirementRow";
 
-export default function AcademicProgressCard() {
-  // Mock data (replace with API later)
-  const requiredCredits = 120;
-  const completedCredits = 146;
+export default function AcademicProgressCard({
+  requiredCredits = 0,
+  completedCredits = 0,
+  requirements = [],
+}) {
+  const req = Number(requiredCredits) || 0;
+  const done = Number(completedCredits) || 0;
 
-  const pct = Math.round((completedCredits / requiredCredits) * 100);
+  const pct = req > 0 ? Math.round((done / req) * 100) : 0;
+  const pctClamped = Math.min(100, Math.max(0, pct));
 
-  const requirements = [
-    { label: "General Education", color: "bg-blue-500", done: 30, req: 30 },
-    { label: "Core Requirements", color: "bg-purple-500", done: 50, req: 45 },
-    { label: "Major Courses", color: "bg-green-500", done: 30, req: 30 },
-    { label: "Electives", color: "bg-orange-500", done: 36, req: 15 },
-  ];
+  const remaining = Math.max(0, req - done);
 
-  const remaining = Math.max(0, requiredCredits - completedCredits);
+  const safeRequirements = Array.isArray(requirements) ? requirements : [];
 
   return (
     <Card className="p-8">
@@ -27,7 +26,8 @@ export default function AcademicProgressCard() {
           <span className="text-xl">🎓</span>
           <h2 className="text-xl font-semibold text-gray-900">Academic Progress</h2>
         </div>
-        <Badge variant="dark">Completed</Badge>
+
+        <Badge variant="dark">{done >= req && req > 0 ? "Completed" : "In progress"}</Badge>
       </div>
 
       {/* Total progress */}
@@ -35,10 +35,8 @@ export default function AcademicProgressCard() {
         <div>
           <p className="text-gray-500">Total Progress</p>
           <div className="mt-2 flex items-end gap-2">
-            <span className="text-5xl font-extrabold text-gray-900">
-              {completedCredits}
-            </span>
-            <span className="text-2xl font-semibold text-gray-400">/ {requiredCredits}</span>
+            <span className="text-5xl font-extrabold text-gray-900">{done}</span>
+            <span className="text-2xl font-semibold text-gray-400">/ {req}</span>
           </div>
           <p className="mt-1 text-gray-500">credits</p>
         </div>
@@ -50,7 +48,7 @@ export default function AcademicProgressCard() {
       </div>
 
       <div className="mt-6">
-        <ProgressBar value={Math.min(100, pct)} className="h-4" />
+        <ProgressBar value={pctClamped} className="h-4" />
       </div>
 
       {/* Requirements Breakdown */}
@@ -61,7 +59,7 @@ export default function AcademicProgressCard() {
         </div>
 
         <div className="mt-6 space-y-5">
-          {requirements.map((r) => (
+          {safeRequirements.map((r) => (
             <RequirementRow key={r.label} item={r} />
           ))}
         </div>
@@ -69,7 +67,7 @@ export default function AcademicProgressCard() {
         <div className="mt-8 border-t border-gray-200 pt-8">
           <div className="grid grid-cols-3 text-center">
             <div>
-              <div className="text-3xl font-extrabold text-emerald-600">{completedCredits}</div>
+              <div className="text-3xl font-extrabold text-emerald-600">{done}</div>
               <div className="text-gray-500">Completed</div>
             </div>
             <div>
@@ -77,7 +75,7 @@ export default function AcademicProgressCard() {
               <div className="text-gray-500">Remaining</div>
             </div>
             <div>
-              <div className="text-3xl font-extrabold text-purple-600">{requiredCredits}</div>
+              <div className="text-3xl font-extrabold text-purple-600">{req}</div>
               <div className="text-gray-500">Required</div>
             </div>
           </div>

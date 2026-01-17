@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import { fetchDashboardView } from "../api/dashboard";
 import CourseActionsCard from "../components/dashboard/CourseActionsCard.jsx";
 import CreditsDistributionCard from "../components/dashboard/CreditsDistributionCard.jsx";
+import AcademicProgressCard from "../components/dashboard/AcademicProgressCard.jsx";
+
 
 export default function DashboardPage() {
   const links = [
@@ -95,50 +97,15 @@ export default function DashboardPage() {
             </div>
           </nav>
         </header>
-
-        {/* Academic Progress */}
+      {/* AcademicProgressCard */}
         <section id="progress" className="mt-8 scroll-mt-24">
-          <div className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm">
-            <div className="flex items-start justify-between gap-4">
-              <div className="flex items-center gap-3">
-                <span className="text-xl">🎓</span>
-                <h2 className="text-xl font-semibold text-gray-900">
-                  Academic Progress
-                </h2>
-              </div>
-              <span className="inline-flex items-center rounded-full bg-gray-900 px-3 py-1 text-sm font-medium text-white">
-                Completed
-              </span>
-            </div>
-
-            <div className="mt-8 flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
-              <div>
-                <p className="text-gray-500">Total Progress</p>
-                <div className="mt-2 flex items-end gap-2">
-                  <span className="text-5xl font-extrabold text-gray-900">
-                    {completedCredits}
-                  </span>
-                  <span className="text-2xl font-semibold text-gray-400">
-                    / {requiredCredits}
-                  </span>
-                </div>
-                <p className="mt-1 text-gray-500">credits</p>
-              </div>
-
-              <div className="text-right">
-                <div className="text-6xl font-extrabold text-gray-900">{pct}%</div>
-                <div className="text-gray-500">Complete!</div>
-              </div>
-            </div>
-
-            <div className="mt-6 h-4 w-full rounded-full bg-gray-100">
-              <div
-                className="h-4 rounded-full bg-gray-900"
-                style={{ width: `${Math.min(100, pct)}%` }}
-              />
-            </div>
-          </div>
+          <AcademicProgressCard
+          requiredCredits={Number(ui.requiredCredits ?? 0)}
+          completedCredits={Number(ui.completedCredits ?? 0)}
+          requirements={Array.isArray(ui.requirements) ? ui.requirements : []}
+          />
         </section>
+
 
         {/* Bottom grid */}
         <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-3">
