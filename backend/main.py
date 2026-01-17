@@ -10,7 +10,7 @@ pip install -r requirements.txt
 
 
 ### code here
-from typing import Dict
+from pydantic import BaseModel
 
 
 # api stuff
@@ -27,6 +27,12 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"]
 )
+
+class CoursePayload(BaseModel):
+    course: str
+class GradePayload(BaseModel):
+    course: str
+    grade: str
 
 ## >> app.jsx for later
 '''
@@ -85,22 +91,113 @@ requirements_EXAMPLE = {
 requirements = {
     "completed": [],
     "in_progress": [],
-    "to do": []
+    "to do": [],
+    "electives": []
 }
+
+
 
 course_grades = {}
 
+
+"""
+degree_requirements is declarative data.
+NO business logic should live here.
+Evaluation logic will consume this structure.
+"""
+
+degree_requirements = [
+    {
+        "id": "option_group_1",
+        "type": "either",
+        "options": [
+            {
+                "id": "opt1",
+                "units": 6,
+                "type": "optional_pool",
+                "constraints": {
+                    "subjects": ["CEG", "ELG", "SEG", "CSI"],
+                    "levels": [3000, 4000],
+                    "csi_min_level": 4000
+                }
+            },
+            {
+                "id": "opt2",
+                "type": "composite",
+                "includes": [
+                    {
+                        "type": "required_course",
+                        "course": "CSI 2372"
+                    },
+                    {
+                        "units": 3,
+                        "type": "optional_pool",
+                        "constraints": {
+                            "subjects": ["CEG", "ELG", "SEG", "CSI"],
+                            "levels": [3000, 4000],
+                            "csi_min_level": 4000
+                        }
+                    }
+                ]
+            }
+        ]
+    },
+
+    {
+        "id": "csi_4000_optional",
+        "units": 12,
+        "type": "optional_pool",
+        "constraints": {
+            "subjects": ["CSI"],
+            "levels": [4000]
+        }
+    },
+
+    {
+        "id": "csi_seg_upper",
+        "units": 3,
+        "type": "optional_pool",
+        "constraints": {
+            "subjects": ["CSI", "SEG"],
+            "levels": [3000, 4000]
+        }
+    },
+
+    {
+        "id": "non_comp_math",
+        "units": 27,
+        "type": "category_total",
+        "category": "non_computing_non_math"
+    },
+
+    {
+        "id": "free_electives",
+        "units": 3,
+        "type": "free_elective"
+    },
+
+    {
+        "total_units_required": 120
+    }
+]
+# ---------- BACKEND LOGIC ----------
+
 # FUNCTIONS
 
-def get_requirements(requirements):
-    requirements["to do"] = [course for course in required_courses if course not in requirements["completed"] and course not in requirements["in_progress"]]
-    return requirements
+def compute_todo(requirements):
+    return [
+        course for course in required_courses
+        if course not in requirements["completed"]
+        and course not in requirements["in_progress"]
+    ]
 
-def get_completed_courses(requirements):
-    return requirements["completed"]
-
-def get_in_progress_courses(requirements):
-    return requirements["in_progress"]
+def get_all_data(requirements, course_grades):
+    return {
+        "requirements": requirements,
+        "to_do": compute_todo(requirements),
+        "course_grades": course_grades,
+        "cgpa": calculate_cgpa(course_grades)
+    }
 
 
 def add_completed_course(requirements, course_code):
@@ -168,29 +265,37 @@ def calculate_cgpa(course_grades):
 
 
 # ---------- FASTAPI ENDPOINTS ----------
-@app.get("/api/requirements")
-def api_get_requirements():
-    return get_requirements(requirements)
+@app.get("/api/dashboard")
+def api_get_dashboard():
+    return get_all_data(requirements, course_grades)
+
+@app.get("/api/degree_requirements")
+def api_get_degree_requirements():
+    return degree_requirements
+
+
 
 @app.post("/api/add_completed")
-def api_add_completed(payload: Dict):
-    course = payload.get("course")
-    add_completed_course(requirements, course)
-    return get_requirements(requirements)
+def api_add_completed(payload: CoursePayload):
+    add_completed_course(requirements, payload.course)
+    return {"status": "ok"}
 
 @app.post("/api/add_in_progress")
-def api_add_in_progress(payload: Dict):
-    course = payload.get("course")
+def api_add_in_progress(payload: CoursePayload):
+    course = payload.course
     add_in_progress_course(requirements, course)
-    return get_requirements(requirements)
+    return {"status": "ok"}
 
-@app.get("/api/cgpa")
-def api_get_cgpa():
-    return {"cgpa": calculate_cgpa(course_grades)}
+# @app.get("/api/cgpa")
+# def api_get_cgpa():
+#     return {"cgpa": calculate_cgpa(course_grades)}
 
 @app.post("/api/add_grade")
-def api_add_grade(payload: Dict):
-    course = payload.get("course")
-    grade = payload.get("grade")
-    add_course_grade(course_grades, course, grade)
+def api_add_grade(payload: GradePayload):
+    add_course_grade(course_grades, payload.course, payload.grade)
     return {"cgpa": calculate_cgpa(course_grades)}
+
+
+@app.get("/health")
+def health():
+    return {"status": "ok"}
