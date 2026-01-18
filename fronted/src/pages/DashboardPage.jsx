@@ -117,7 +117,12 @@ export default function DashboardPage() {
             className="flex scroll-mt-24 lg:col-span-1"
           >
             <div className="h-full w-full">
-              <CreditsDistributionCard requirements={requirements} />
+              <CreditsDistributionCard
+                requirements={ui.requirements}
+                completedCredits={ui.completedCredits}
+                requiredCredits={ui.requiredCredits}
+              />
+
             </div>
           </section>
         </div>

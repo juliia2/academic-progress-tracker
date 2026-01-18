@@ -43,7 +43,11 @@ const CustomTooltip = ({ active, payload }) => {
   );
 };
 
-export default function CreditsDistributionCard({ requirements = [] }) {
+export default function CreditsDistributionCard({ 
+  requirements = [],
+  completedCredits = 0,
+  requiredCredits = 0,
+}) {
   const data = useMemo(() => {
     const list = Array.isArray(requirements) ? requirements : [];
 
@@ -54,7 +58,6 @@ export default function CreditsDistributionCard({ requirements = [] }) {
         label: r.label ?? `Category ${i + 1}`,
         req,
         done,
-       
         value: Math.max(0, req),
       };
     });
@@ -66,6 +69,12 @@ export default function CreditsDistributionCard({ requirements = [] }) {
     const totalPct = totalReq > 0 ? Math.round((totalDone / totalReq) * 100) : 0;
     return { totalReq, totalDone, totalPct };
   }, [data]);
+
+  // Overall percent (matches AcademicProgressCard)
+  const overallReq = Number(requiredCredits) || 0;
+  const overallDone = Number(completedCredits) || 0;
+  const overallPct =
+    overallReq > 0 ? Math.round((overallDone / overallReq) * 100) : 0;
 
   if (totals.totalReq <= 0) {
     return (
@@ -114,14 +123,14 @@ export default function CreditsDistributionCard({ requirements = [] }) {
           </PieChart>
         </ResponsiveContainer>
 
-        {/* Center KPI */}
+        {/* Center KPI now matches Total Progress */}
         <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center">
           <div className="text-center">
             <div className="text-3xl font-extrabold text-slate-900">
-              {totals.totalPct}%
+              {overallPct}%
             </div>
             <div className="mt-1 text-sm text-slate-500">
-              {totals.totalDone} / {totals.totalReq} credits
+              {overallDone} / {overallReq} credits
             </div>
           </div>
         </div>
