@@ -5,10 +5,13 @@ const API = import.meta.env.VITE_API_URL;
  * Backend must return UI-ready data.
  */
 export async function fetchDashboardView() {
-  const res = await fetch(`${API}/api/dashboard`);
+  const res = await fetch(`${API}/api/dashboard`, {
+    cache: "no-store", // <-- ensures fresh data, avoids 304
+  });
   if (!res.ok) throw new Error("Failed to load dashboard");
   return res.json();
 }
+
 
 /**
  * Mark a course as completed.
