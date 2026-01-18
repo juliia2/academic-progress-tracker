@@ -1,4 +1,9 @@
-const API = import.meta.env.VITE_API_URL.replace(/\/$/, ""); // remove trailing slash
+// Current way (vulnerable to double slashes)
+const API = import.meta.env.VITE_API_URL; 
+
+// The Bulletproof way:
+// This works whether API is "https://site.com/" or "https://site.com"
+const getUrl = (path) => new URL(path, import.meta.env.VITE_API_URL).href;
 
 export async function fetchDashboardView() {
   const res = await fetch(`${API}/api/dashboard`);
