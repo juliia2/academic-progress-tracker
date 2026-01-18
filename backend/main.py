@@ -13,7 +13,7 @@ pip install -r requirements.txt
 from pydantic import BaseModel
 
 # prevent 404 in browser
-from fastapi.responses import FileResponse
+from fastapi.responses import FileResponse, JSONResponse
 import os
 
 
@@ -432,7 +432,7 @@ def api_get_dashboard():
         },
     ]
 
-    return {
+    data = {
         "requiredCredits": requiredCredits,
         "completedCredits": completedCredits,
         "cumulativeGPA": calculate_cgpa(course_grades),
@@ -450,6 +450,12 @@ def api_get_dashboard():
         "electives": electives,
         "courseGrades": course_grades,
     }
+    return JSONResponse(
+        content=data,
+        status_code=200,
+        headers={"Cache-Control": "no-store, no-cache, must-revalidate, max-age=0"}
+    )
+
 
 @app.get("/api/degree_requirements")
 def api_get_degree_requirements():
