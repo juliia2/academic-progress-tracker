@@ -1,13 +1,9 @@
 import React, { useMemo } from "react";
-import {
-  ResponsiveContainer,
-  PieChart,
-  Pie,
-  Cell,
-  Tooltip,
-} from "recharts";
+import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from "recharts";
+import Card from "./ui/Card";
 
-const COLORS = ["#3b82f6", "#a855f7", "#22c55e", "#f97316"]; // blue, purple, green, orange
+// Slightly softer, calmer palette (still distinct categories)
+const COLORS = ["#2563eb", "#7c3aed", "#16a34a", "#ea580c"]; // blue, purple, green, orange
 
 function pct(done, req) {
   if (!req || req <= 0) return 0;
@@ -22,16 +18,24 @@ const CustomTooltip = ({ active, payload }) => {
   const req = Number(d.req ?? 0);
 
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white px-5 py-4 shadow-lg">
-      <div className="text-lg font-extrabold text-gray-900">{d.label}</div>
-      <div className="mt-1 text-sm text-gray-600">
-        Completed: <span className="font-semibold text-gray-900">{done}</span> credits
+    <div className="rounded-xl border border-slate-200 bg-white px-5 py-4 shadow-lg">
+      <div className="text-lg font-extrabold text-slate-900">{d.label}</div>
+
+      <div className="mt-1 text-sm text-slate-600">
+        Completed:{" "}
+        <span className="font-semibold text-slate-900">{done}</span> credits
       </div>
-      <div className="text-sm text-gray-600">
-        Required: <span className="font-semibold text-gray-900">{req}</span> credits
+
+      <div className="text-sm text-slate-600">
+        Required:{" "}
+        <span className="font-semibold text-slate-900">{req}</span> credits
       </div>
-      <div className="text-sm text-gray-600">
-        Progress: <span className="font-semibold text-gray-900">{pct(done, req)}%</span>
+
+      <div className="text-sm text-slate-600">
+        Progress:{" "}
+        <span className="font-semibold text-slate-900">
+          {pct(done, req)}%
+        </span>
       </div>
     </div>
   );
@@ -63,21 +67,27 @@ export default function CreditsDistributionCard({ requirements = [] }) {
 
   if (totals.totalReq <= 0) {
     return (
-      <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+      <Card className="p-6">
         <div className="flex items-center gap-3">
           <span className="text-xl">📊</span>
-          <h3 className="text-lg font-semibold text-gray-900">Credits Distribution</h3>
+          <h3 className="text-lg font-semibold text-sky-900">
+            Credits Distribution
+          </h3>
         </div>
-        <div className="mt-4 text-sm text-gray-500">No requirements data yet.</div>
-      </div>
+        <div className="mt-4 text-sm text-slate-500">
+          No requirements data yet.
+        </div>
+      </Card>
     );
   }
 
   return (
-    <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+    <Card className="p-6">
       <div className="flex items-center gap-3">
         <span className="text-xl">📊</span>
-        <h3 className="text-lg font-semibold text-gray-900">Credits Distribution</h3>
+        <h3 className="text-lg font-semibold text-sky-900">
+          Credits Distribution
+        </h3>
       </div>
 
       {/* Chart */}
@@ -105,10 +115,10 @@ export default function CreditsDistributionCard({ requirements = [] }) {
         {/* Center KPI */}
         <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
           <div className="text-center">
-            <div className="text-3xl font-extrabold text-gray-900">
+            <div className="text-3xl font-extrabold text-slate-900">
               {totals.totalPct}%
             </div>
-            <div className="mt-1 text-sm text-gray-500">
+            <div className="mt-1 text-sm text-slate-500">
               {totals.totalDone} / {totals.totalReq} credits
             </div>
           </div>
@@ -123,12 +133,15 @@ export default function CreditsDistributionCard({ requirements = [] }) {
 
           return (
             <div key={d.label} className="flex items-start gap-3">
-              <span className="mt-2 h-4 w-4 rounded-full" style={{ backgroundColor: color }} />
+              <span
+                className="mt-2 h-4 w-4 rounded-full"
+                style={{ backgroundColor: color }}
+              />
               <div className="min-w-0">
-                <div className="truncate text-base font-extrabold text-gray-900">
+                <div className="truncate text-base font-extrabold text-slate-900">
                   {d.label}
                 </div>
-                <div className="text-sm text-gray-500">
+                <div className="text-sm text-slate-500">
                   {d.done}/{d.req} ({p}%)
                 </div>
               </div>
@@ -136,6 +149,6 @@ export default function CreditsDistributionCard({ requirements = [] }) {
           );
         })}
       </div>
-    </div>
+    </Card>
   );
 }

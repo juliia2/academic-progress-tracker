@@ -19,10 +19,14 @@ export default function AcademicProgressCard({
       <div className="flex items-start justify-between gap-4">
         <div className="flex items-center gap-3">
           <span className="text-xl">🎓</span>
-          <h2 className="text-xl font-semibold text-gray-900">Academic Progress</h2>
+          <h2 className="text-xl font-semibold text-sky-900">
+            Academic Progress
+          </h2>
         </div>
 
-        <Badge variant="dark">{done >= req && req > 0 ? "Completed" : "In progress"}</Badge>
+        <Badge variant={done >= req && req > 0 ? "success" : "info"}>
+          {done >= req && req > 0 ? "Completed" : "In progress"}
+        </Badge>
       </div>
 
       {/* Total progress */}

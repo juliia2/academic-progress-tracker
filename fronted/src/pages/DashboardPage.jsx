@@ -7,7 +7,6 @@ import TranscriptCard from "../components/dashboard/TranscriptCard.jsx";
 import DashboardHeader from "../components/dashboard/DashboardHeader.jsx";
 
 export default function DashboardPage() {
-
   const [ui, setUi] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -32,9 +31,9 @@ export default function DashboardPage() {
 
   if (loading) {
     return (
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-slate-50">
         <div className="mx-auto max-w-6xl px-6 py-10">
-          <div className="text-sm text-gray-500">Loading…</div>
+          <div className="text-sm text-slate-500">Loading…</div>
         </div>
       </div>
     );
@@ -42,14 +41,15 @@ export default function DashboardPage() {
 
   if (error || !ui) {
     return (
-      <div className="min-h-screen bg-white">
+      <div className="min-h-screen bg-slate-50">
         <div className="mx-auto max-w-6xl px-6 py-10">
           <div className="text-sm text-red-600">
             {error || "Failed to load dashboard"}
           </div>
+
           <button
             onClick={load}
-            className="mt-4 rounded-xl border border-gray-200 bg-white px-4 py-2 text-sm font-medium text-gray-900 shadow-sm hover:bg-gray-50"
+            className="mt-4 rounded-xl border border-slate-200 bg-white px-4 py-2 text-sm font-medium text-slate-900 shadow-sm hover:bg-slate-50"
           >
             Retry
           </button>
@@ -59,13 +59,15 @@ export default function DashboardPage() {
   }
 
   const requirements = Array.isArray(ui.requirements) ? ui.requirements : [];
-  const transcriptYears = Array.isArray(ui.transcriptYears) ? ui.transcriptYears : [];
+  const transcriptYears = Array.isArray(ui.transcriptYears)
+    ? ui.transcriptYears
+    : [];
 
   const cumulativeGPA = Number(ui.cumulativeGPA ?? 0);
   const transcriptCreditsCompleted = Number(ui.transcriptCreditsCompleted ?? 0);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-slate-50">
       <div className="mx-auto max-w-6xl px-6 py-10">
         <DashboardHeader />
 
@@ -78,10 +80,12 @@ export default function DashboardPage() {
           />
         </section>
 
-
-         {/* Top grid - Course Actions and Credits Distribution side by side */}
+        {/* Top grid - Course Actions and Credits Distribution side by side */}
         <div className="mt-8 grid grid-cols-1 gap-6 lg:grid-cols-2">
-          <section id="update-courses" className="flex scroll-mt-24 lg:col-span-1">
+          <section
+            id="update-courses"
+            className="flex scroll-mt-24 lg:col-span-1"
+          >
             <div className="h-full w-full">
               <CourseActionsCard
                 availableCourses={ui.availableCourses || []}
@@ -91,7 +95,10 @@ export default function DashboardPage() {
             </div>
           </section>
 
-          <section id="distribution" className="flex scroll-mt-24 lg:col-span-1">
+          <section
+            id="distribution"
+            className="flex scroll-mt-24 lg:col-span-1"
+          >
             <div className="h-full w-full">
               <CreditsDistributionCard requirements={requirements} />
             </div>

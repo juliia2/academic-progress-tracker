@@ -6,24 +6,24 @@ export default function YearSection({ year }) {
   const hasStats = year.gpa !== undefined && year.credits !== undefined;
 
   return (
-    <div className="border-t border-gray-200 pt-8">
+    <div className="border-t border-slate-200 pt-8">
       {/* Year header */}
       <div className="flex items-start justify-between gap-6">
         <div>
-          <div className="text-3xl font-extrabold text-gray-900">
+          <div className="text-3xl font-extrabold text-slate-900">
             {year.year}
           </div>
-          <div className="text-gray-500">
+          <div className="text-sm text-slate-500">
             Academic Year {year.academicYear}
           </div>
         </div>
 
         {hasStats && (
           <div className="text-right">
-            <div className="text-2xl font-extrabold text-gray-900">
+            <div className="text-2xl font-extrabold text-slate-900">
               {Number(year.gpa).toFixed(2)}
             </div>
-            <div className="text-gray-500">
+            <div className="text-sm text-slate-500">
               {year.credits} credits
             </div>
           </div>

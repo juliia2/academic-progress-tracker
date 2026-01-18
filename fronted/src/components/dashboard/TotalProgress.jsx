@@ -16,17 +16,31 @@ export default function TotalProgress({
       {/* Numeric display */}
       <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
         <div>
-          <p className="text-gray-500">Total Progress</p>
+          <p className="text-sm font-medium text-slate-500">
+            Total Progress
+          </p>
+
           <div className="mt-2 flex items-end gap-2">
-            <span className="text-5xl font-extrabold text-gray-900">{done}</span>
-            <span className="text-2xl font-semibold text-gray-400">/ {req}</span>
+            <span className="text-5xl font-extrabold text-sky-900">
+              {done}
+            </span>
+            <span className="text-2xl font-semibold text-slate-400">
+              / {req}
+            </span>
           </div>
-          <p className="mt-1 text-gray-500">credits</p>
+
+          <p className="mt-1 text-sm text-slate-500">
+            credits
+          </p>
         </div>
 
         <div className="text-right">
-          <div className="text-6xl font-extrabold text-gray-900">{pct}%</div>
-          <div className="text-gray-500">Complete!</div>
+          <div className="text-6xl font-extrabold text-sky-900">
+            {pct}%
+          </div>
+          <div className="text-sm font-medium text-slate-500">
+            Complete
+          </div>
         </div>
       </div>
 
