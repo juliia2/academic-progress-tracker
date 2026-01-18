@@ -5,6 +5,8 @@ const API = import.meta.env.VITE_API_URL;
 // This works whether API is "https://site.com/" or "https://site.com"
 const getUrl = (path) => new URL(path, import.meta.env.VITE_API_URL).href;
 
+// Usage:
+const response = await fetch(getUrl('/api/dashboard'));
 export async function fetchDashboardView() {
   const res = await fetch(`${API}/api/dashboard`);
   if (!res.ok) throw new Error("Failed to load dashboard");
