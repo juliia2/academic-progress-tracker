@@ -135,10 +135,10 @@ degree_requirements = [
     {
         "id": "option_group_1",
         "type": "either",
+        "units": 6,
         "options": [
             {
                 "id": "opt1",
-                "units": 6,
                 "type": "optional_pool",
                 "constraints": {
                     "subjects": ["CEG", "ELG", "SEG", "CSI"],
@@ -151,11 +151,12 @@ degree_requirements = [
                 "type": "composite",
                 "includes": [
                     {
+                        # "units": 3,
                         "type": "required_course",
                         "course": "CSI 2372"
                     },
                     {
-                        "units": 3,
+                        # "units": 3,
                         "type": "optional_pool",
                         "constraints": {
                             "subjects": ["CEG", "ELG", "SEG", "CSI"],
@@ -224,7 +225,7 @@ def get_all_data(requirements, course_grades):
         "cgpa": calculate_cgpa(course_grades),
         "electives": [
             r for r in degree_requirements
-            if r.get("type") in ["optional_pool", "free_elective", "category_total", "optional_pool"]
+            if r.get("type") in ["either", "free_elective", "category_total", "optional_pool"]
         ]
 
     }
