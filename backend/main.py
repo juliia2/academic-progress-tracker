@@ -109,6 +109,8 @@ required_courses=['ENG 1112', 'ITI 1100', 'ITI 1120',
                   'SEG 2105', 'CSI 3104', 'CSI 3105', 
                   'CSI 3120', 'CSI 3131', 'CSI 3140', 
                   'CEG 3185', 'CSI 4900']
+
+required_courses_units = len(required_courses)
 requirements_EXAMPLE = {
     "completed": [required_courses[0]], ## 
     "in_progress": [required_courses[1]], }
@@ -133,6 +135,14 @@ Evaluation logic will consume this structure.
 
 degree_requirements = [
     {
+        "id": "core_courses",
+        "units": required_courses_units,
+        "type": "required_pool",
+        "courses": required_courses
+    },
+    
+    {
+        
         "id": "option_group_1",
         "type": "either",
         "units": 6,
