@@ -1,4 +1,14 @@
-const API = import.meta.env.VITE_API_URL.replace(/\/$/, ""); // remove trailing slash
+<<<<<<< HEAD
+
+/// This cleans the string immediately when the app loads
+const API = import.meta.env.VITE_API_URL.replace(/\/$/, "");
+
+// Now this will ALWAYS result in a single slash
+const url = `${API}/api/dashboard`;
+console.log("Checking URL:", url); // Open your browser console to verify!
+=======
+const API = "http://127.0.0.1:5000";
+>>>>>>> parent of 3dc6bbe (Revert "undid things")
 
 export async function fetchDashboardView() {
   const res = await fetch(`${API}/api/dashboard`);

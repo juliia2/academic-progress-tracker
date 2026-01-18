@@ -19,13 +19,12 @@ import os
 
 
 # api stuff
-from fastapi import FastAPI
+from fastapi import FastAPI, Request
 from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
 
 
-# allow React dev server to access FastAPI
 '''app.add_middleware(
     CORSMiddleware,
     allow_origins=["http://localhost:5173"],  # Vite default port
@@ -36,6 +35,7 @@ app = FastAPI()
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
+        "https://udash-gxge2jgwl-juliia2s-projects.vercel.app"
         "http://localhost:5173",
         "http://localhost:5174",
         "http://localhost:5175",
@@ -381,6 +381,22 @@ def build_transcript_years(requirements, course_grades):
     }]
 
 # ---------- FASTAPI ENDPOINTS ----------
+@app.middleware("http")
+async def fix_double_slashes(request: Request, call_next):
+    path = request.url.path
+    if "//" in path:
+        # Replace double slashes with single ones
+        new_path = path.replace("//", "/")
+        # You can either redirect or just modify the scope
+        # Modifying scope is often cleaner as it doesn't trigger a 301
+        new_scope = request.scope.copy()
+        new_scope["path"] = new_path
+        request = Request(new_scope)
+        
+    response = await call_next(request)
+    return response
+
+
 @app.get("/api/dashboard")
 def api_get_dashboard():
     completed = requirements["completed"]
