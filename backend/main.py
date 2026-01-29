@@ -9,6 +9,7 @@ pip install -r requirements.txt
 # to run: uvicorn main:app --reload --port 5000
 
 
+
 ### code here
 from pydantic import BaseModel
 
@@ -21,6 +22,8 @@ import os
 # api stuff
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi import Request
+
 
 app = FastAPI()
 
@@ -59,9 +62,8 @@ class ElectivePayload(BaseModel):
     credits: int = 3
 
 
-# to run: uvicorn main:app --reload --port 5000
 
-
+user_data = {}
 #HARDCODING FOR DEMO
 
 # Course catalog mapping
@@ -376,9 +378,33 @@ def build_transcript_years(requirements, course_grades):
         "courses": courses_data
     }]
 
+def get_user_data(user_id):
+    if user_id not in user_data:
+        user_data[user_id] = {
+            "requirements": {
+                "completed": [],
+                "in_progress": [],
+                "electives": []
+            },
+            "course_grades": {},
+        }
+    return user_data[user_id]
+
 # ---------- FASTAPI ENDPOINTS ----------
 @app.get("/api/dashboard")
-def api_get_dashboard():
+def api_get_dashboard(request: Request):
+    user_id = request.headers.get("x-user-id")
+    if not user_id:
+        return JSONResponse(content={"error": "Missing user ID"}, status_code=400)
+
+    ## get user data
+    data_store = get_user_data(user_id)
+    requirements = data_store["requirements"]
+    course_grades = data_store["course_grades"]
+
+    requirements = user_data[user_id]["requirements"]
+    course_grades = user_data[user_id]["course_grades"]
+
     completed = requirements["completed"]
     in_progress = requirements["in_progress"]
     electives = requirements["electives"]
@@ -460,12 +486,26 @@ def api_get_degree_requirements():
 
 
 @app.post("/api/add_completed")
-def api_add_completed(payload: CoursePayload):
+def api_add_completed(payload: CoursePayload, request: Request):
+    user_id = request.headers.get("x-user-id")
+    if not user_id:
+        return JSONResponse(content={"error": "Missing user ID"}, status_code=400)
+
+    data_store = get_user_data(user_id)
+    requirements = data_store["requirements"]
+
     add_completed_course(requirements, payload.course)
     return {"status": "ok"}
 
 @app.post("/api/add_in_progress")
-def api_add_in_progress(payload: CoursePayload):
+def api_add_in_progress(payload: CoursePayload, request: Request):
+    user_id = request.headers.get("x-user-id")
+    if not user_id:
+        return JSONResponse(content={"error": "Missing user ID"}, status_code=400)
+
+    data_store = get_user_data(user_id)
+    requirements = data_store["requirements"]
+
     course = payload.course
     add_in_progress_course(requirements, course)
     return {"status": "ok"}
@@ -475,7 +515,14 @@ def api_add_in_progress(payload: CoursePayload):
 #     return {"cgpa": calculate_cgpa(course_grades)}
 
 @app.post("/api/add_grade")
-def api_add_grade(payload: GradePayload):
+def api_add_grade(payload: GradePayload, request: Request):
+    user_id = request.headers.get("x-user-id")
+    if not user_id:
+        return JSONResponse(content={"error": "Missing user ID"}, status_code=400)
+
+    data_store = get_user_data(user_id)
+    course_grades = data_store["course_grades"]
+
     add_course_grade(course_grades, payload.course, payload.grade)
     return {"cgpa": calculate_cgpa(course_grades)}
 
@@ -502,7 +549,14 @@ class ElectivePayload(BaseModel):
     credits: int = 3
 
 @app.post("/api/add_elective")
-def api_add_elective(payload: ElectivePayload):
+def api_add_elective(payload: ElectivePayload, request: Request):
+    user_id = request.headers.get("x-user-id")
+    if not user_id:
+        return JSONResponse(content={"error": "Missing user ID"}, status_code=400)
+
+    data_store = get_user_data(user_id)
+    requirements = data_store["requirements"]
+
     code = payload.courseName.strip().upper()
     credits = int(payload.credits)
 
@@ -518,3 +572,20 @@ def api_add_elective(payload: ElectivePayload):
 
     return {"ok": True}
 
+@app.post("/reset_all")
+async def reset_all(request: Request):
+    user_id = request.headers.get("x-user-id")
+    if not user_id:
+        return JSONResponse(content={"error": "Missing user ID"}, status_code=400)
+
+    # Reset only this user's data
+    user_data[user_id] = {
+        "requirements": {
+            "completed": [],
+            "in_progress": [],
+            "electives": []
+        },
+        "course_grades": {},
+    }
+
+    return JSONResponse(content={"message": "Your data has been reset"}, status_code=200)

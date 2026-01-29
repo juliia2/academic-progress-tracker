@@ -1,3 +1,13 @@
+import crypto from "crypto";
+
+let userId = localStorage.getItem("userId");
+if (!userId) {
+  userId = crypto.randomUUID(); // generate a unique id
+  localStorage.setItem("userId", userId);
+}
+
+
+
 //const API = "http://127.0.0.1:5000";
 
 // Ensure no trailing slash on the base API URL
@@ -9,7 +19,13 @@ function buildUrl(path) {
 }
 
 export async function fetchDashboardView() {
-  const res = await fetch(buildUrl("/api/dashboard"));
+  const res = await fetch(buildUrl("/api/dashboard"),
+{
+    headers: {
+      "Content-Type": "application/json",
+      "x-user-id": userId, // pass user ID
+    },
+});
   if (!res.ok) throw new Error("Failed to load dashboard");
   return res.json();
 }
@@ -20,7 +36,7 @@ export async function fetchDashboardView() {
 export async function addCompleted(course) {
   const res = await fetch(`${API}/api/add_completed`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", "x-user-id": userId },
     body: JSON.stringify({ course }),
   });
 
@@ -34,7 +50,7 @@ export async function addCompleted(course) {
 export async function addInProgress(course) {
   const res = await fetch(`${API}/api/add_in_progress`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", "x-user-id": userId },
     body: JSON.stringify({ course }),
   });
 
@@ -48,7 +64,7 @@ export async function addInProgress(course) {
 export async function addElective(courseName, credits) {
   const res = await fetch(`${API}/api/add_elective`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", "x-user-id": userId },
     body: JSON.stringify({
       courseName,
       credits,
@@ -72,10 +88,33 @@ export async function addElective(courseName, credits) {
 export async function addGrade(course, grade) {
   const res = await fetch(`${API}/api/add_grade`, {
     method: "POST",
-    headers: { "Content-Type": "application/json" },
+    headers: { "Content-Type": "application/json", "x-user-id": userId },
     body: JSON.stringify({ course, grade }),
   });
 
   if (!res.ok) throw new Error("Failed to add grade");
   return res.json();
+}
+
+
+
+
+export async function resetAll() {
+  if (!confirm("Are you sure you want to reset all your data?")) return;
+
+  const res = await fetch(buildUrl("/reset_all"), {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "x-user-id": userId,
+    },
+  });
+
+  if (!res.ok) {
+    alert("Failed to reset data");
+    return;
+  }
+
+  alert("Your data has been reset!");
+  window.location.reload(); // refresh to show empty dashboard
 }
