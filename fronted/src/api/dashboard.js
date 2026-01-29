@@ -1,12 +1,18 @@
-const API = "http://127.0.0.1:5000";
+//const API = "http://127.0.0.1:5000";
 
+// Ensure no trailing slash on the base API URL
+const API = import.meta.env.VITE_API_URL?.replace(/\/$/, "");
+
+// Helper to build URLs safely
+function buildUrl(path) {
+  return `${API}${path.startsWith("/") ? path : "/" + path}`;
+}
 
 export async function fetchDashboardView() {
-  const res = await fetch(`${API}/api/dashboard`);
+  const res = await fetch(buildUrl("/api/dashboard"));
   if (!res.ok) throw new Error("Failed to load dashboard");
   return res.json();
 }
-
 
 /**
  * Mark a course as completed.

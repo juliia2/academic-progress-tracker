@@ -2,10 +2,8 @@ import React, { useMemo } from "react";
 import { ResponsiveContainer, PieChart, Pie, Cell, Tooltip } from "recharts";
 import Card from "./ui/Card";
 
-const COLORS = [ "#0c4a6e", 
-  "#0369a1", 
-  "#94a3b8", 
-  "#cbd5e1", ]; 
+// Slightly softer, calmer palette (still distinct categories)
+const COLORS = ["#2563eb", "#7c3aed", "#16a34a", "#ea580c"]; // blue, purple, green, orange
 
 function pct(done, req) {
   if (!req || req <= 0) return 0;
@@ -43,11 +41,7 @@ const CustomTooltip = ({ active, payload }) => {
   );
 };
 
-export default function CreditsDistributionCard({ 
-  requirements = [],
-  completedCredits = 0,
-  requiredCredits = 0,
-}) {
+export default function CreditsDistributionCard({ requirements = [] }) {
   const data = useMemo(() => {
     const list = Array.isArray(requirements) ? requirements : [];
 
@@ -58,6 +52,7 @@ export default function CreditsDistributionCard({
         label: r.label ?? `Category ${i + 1}`,
         req,
         done,
+        // slice sizes based on required credits distribution
         value: Math.max(0, req),
       };
     });
@@ -69,12 +64,6 @@ export default function CreditsDistributionCard({
     const totalPct = totalReq > 0 ? Math.round((totalDone / totalReq) * 100) : 0;
     return { totalReq, totalDone, totalPct };
   }, [data]);
-
-  // Overall percent (matches AcademicProgressCard)
-  const overallReq = Number(requiredCredits) || 0;
-  const overallDone = Number(completedCredits) || 0;
-  const overallPct =
-    overallReq > 0 ? Math.round((overallDone / overallReq) * 100) : 0;
 
   if (totals.totalReq <= 0) {
     return (
@@ -105,7 +94,7 @@ export default function CreditsDistributionCard({
       <div className="relative mt-4 h-80">
         <ResponsiveContainer width="100%" height="100%">
           <PieChart>
-            <Tooltip content={<CustomTooltip />} wrapperStyle={{ zIndex: 1000 }} />
+            <Tooltip content={<CustomTooltip />} />
             <Pie
               data={data}
               dataKey="value"
@@ -123,14 +112,14 @@ export default function CreditsDistributionCard({
           </PieChart>
         </ResponsiveContainer>
 
-        {/* Center KPI now matches Total Progress */}
-        <div className="pointer-events-none absolute inset-0 z-10 flex items-center justify-center">
+        {/* Center KPI */}
+        <div className="pointer-events-none absolute inset-0 flex items-center justify-center">
           <div className="text-center">
             <div className="text-3xl font-extrabold text-slate-900">
-              {overallPct}%
+              {totals.totalPct}%
             </div>
             <div className="mt-1 text-sm text-slate-500">
-              {overallDone} / {overallReq} credits
+              {totals.totalDone} / {totals.totalReq} credits
             </div>
           </div>
         </div>
