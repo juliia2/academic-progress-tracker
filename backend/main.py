@@ -38,8 +38,9 @@ app.add_middleware(
     allow_origins=[
         "https://u-dash.tech",
         "http://localhost:5173",
-        "udash-smoky.vercel.app",
+        "https://udash-smoky.vercel.app",
     ],
+    allow_origin_regex=r"https://.*\.vercel\.app",  # all Vercel previews
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
