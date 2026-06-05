@@ -7,6 +7,7 @@ pip install -r requirements.txt
 
 '''
 # to run: uvicorn main:app --reload --port 5000
+# make sure you have a .env file with VITE_API_URL=http://
 
 
 
@@ -68,7 +69,9 @@ user_data = {}
 #HARDCODING FOR DEMO
 
 # Course catalog mapping
-COURSE_CATALOG = json.load(open("courseCatalog.json", "r"))  # code -> {name, credits}
+with open("courseCatalog.json", "r", encoding="utf-8") as f:
+    COURSE_CATALOG = json.load(f)
+#COURSE_CATALOG = json.load(open("courseCatalog.json", "r"))  # code -> {name, credits}
 
 required_courses=['ENG 1112', 'ITI 1100', 'ITI 1120', 
                   'ITI 1121', 'MAT 1320', 'MAT 1322', 
