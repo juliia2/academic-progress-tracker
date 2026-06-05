@@ -68,7 +68,7 @@ user_data = {}
 #HARDCODING FOR DEMO
 
 # Course catalog mapping
-COURSE_CATALOG = json.load(open("courseCatalog.json", "r"))  # code -> {name, credits}
+COURSE_CATALOG = json.load(open("requiredCourses.json", "r"))  # code -> {name, credits}
 
 required_courses=['ENG 1112', 'ITI 1100', 'ITI 1120', 
                   'ITI 1121', 'MAT 1320', 'MAT 1322', 
@@ -202,7 +202,7 @@ def get_all_data(requirements, course_grades):
         "to_do": compute_todo(requirements),
         "course_grades": course_grades,
         "cgpa": calculate_cgpa(course_grades),
-        "electives": requirements["electives"],  # ✅ user-added electives
+        "electives": requirements["electives"],  
     }
 
 

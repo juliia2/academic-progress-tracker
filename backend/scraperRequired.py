@@ -36,7 +36,7 @@ if __name__ == "__main__":
     catalog = scrape_courses(URL)
     print(f"Found {len(catalog)} courses.")
 
-    output_path = "courseCatalog.json"
+    output_path = "requiredCourses.json"
     with open(output_path, "w") as f:
         json.dump(catalog, f, indent=2, ensure_ascii=False)
 
