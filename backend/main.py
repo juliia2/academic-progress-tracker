@@ -27,6 +27,7 @@ from fastapi import Request
 
 app = FastAPI()
 
+import json
 
 # allow React dev server to access FastAPI
 '''app.add_middleware(
@@ -67,31 +68,7 @@ user_data = {}
 #HARDCODING FOR DEMO
 
 # Course catalog mapping
-COURSE_CATALOG = {
-    'ENG 1112': {'name': 'Technical Report Writing', 'credits': 3},
-    'ITI 1100': {'name': 'Digital Systems I', 'credits': 3},
-    'ITI 1120': {'name': 'Introduction to Computing I', 'credits': 3},
-    'ITI 1121': {'name': 'Introduction to Computing II', 'credits': 3},
-    'MAT 1320': {'name': 'Calculus I', 'credits': 3},
-    'MAT 1322': {'name': 'Calculus II', 'credits': 3},
-    'MAT 1341': {'name': 'Introduction to Linear Algebra', 'credits': 3},
-    'MAT 1348': {'name': 'Discrete Mathematics for Computing', 'credits': 3},
-    'CEG 2136': {'name': 'Computer Architecture I', 'credits': 3},
-    'CSI 2101': {'name': 'Discrete Structures', 'credits': 3},
-    'CSI 2110': {'name': 'Data Structures and Algorithms', 'credits': 3},
-    'CSI 2120': {'name': 'Programming Paradigms', 'credits': 3},
-    'CSI 2132': {'name': 'Databases I', 'credits': 3},
-    'CSI 2911': {'name': 'Professional Practice in Computing', 'credits': 3},
-    'MAT 2377': {'name': 'Probability and Statistics for Engineers', 'credits': 3},
-    'SEG 2105': {'name': 'Introduction to Software Engineering', 'credits': 3},
-    'CSI 3104': {'name': 'Introduction to Formal Languages', 'credits': 3},
-    'CSI 3105': {'name': 'Design and Analysis of Algorithms I', 'credits': 3},
-    'CSI 3120': {'name': 'Programming Language Concepts', 'credits': 3},
-    'CSI 3131': {'name': 'Operating Systems', 'credits': 3},
-    'CSI 3140': {'name': 'WWW Structures, Techniques and Standards', 'credits': 3},
-    'CEG 3185': {'name': 'Introduction to Data Communications and Networking', 'credits': 3},
-    'CSI 4900': {'name': 'Computer Science Project', 'credits': 6},
-}
+COURSE_CATALOG = json.load(open("courseCatalog.json", "r"))  # code -> {name, credits}
 
 required_courses=['ENG 1112', 'ITI 1100', 'ITI 1120', 
                   'ITI 1121', 'MAT 1320', 'MAT 1322', 
