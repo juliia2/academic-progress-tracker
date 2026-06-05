@@ -68,21 +68,15 @@ user_data = {}
 #HARDCODING FOR DEMO
 
 # Course catalog mapping
-COURSE_CATALOG = json.load(open("requiredCourses.json", "r"))  # code -> {name, credits}
+with open("requiredCourses.json", "r", encoding="utf-8") as f:
+    COURSE_CATALOG = json.load(f)
 
-required_courses=['ENG 1112', 'ITI 1100', 'ITI 1120', 
-                  'ITI 1121', 'MAT 1320', 'MAT 1322', 
-                  'MAT 1341', 'MAT 1348', 'CEG 2136', 
-                  'CSI 2101', 'CSI 2110', 'CSI 2120', 
-                  'CSI 2132', 'CSI 2911', 'MAT 2377', 
-                  'SEG 2105', 'CSI 3104', 'CSI 3105', 
-                  'CSI 3120', 'CSI 3131', 'CSI 3140', 
-                  'CEG 3185', 'CSI 4900']
+required_courses=COURSE_CATALOG.keys()
 
-required_courses_units = len(required_courses) *3  # assuming each course is 3 units
-requirements_EXAMPLE = {
-    "completed": [required_courses[0]], ## 
-    "in_progress": [required_courses[1]], }
+# required_courses_units = len(required_courses) *3  # assuming each course is 3 units
+# requirements_EXAMPLE = {
+#     "completed": [required_courses[0]], ## 
+#     "in_progress": [required_courses[1]], }
 
 requirements = {
     "completed": [],
@@ -101,6 +95,7 @@ degree_requirements is declarative data.
 NO business logic should live here.
 Evaluation logic will consume this structure.
 """
+required_courses_units = len(required_courses) * 3  # assuming each course is 3 units
 
 degree_requirements = [
     {
