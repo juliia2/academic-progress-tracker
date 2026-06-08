@@ -7,18 +7,18 @@ const links = [
   { id: 4, href: "#transcript", text: "Transcript" },
 ];
 
-export default function DashboardHeader() {
+export default function DashboardHeader({ onReset }) {
   const sectionIds = useMemo(
     () => links.map((l) => l.href.replace("#", "")),
     []
   );
 
-  const [active, setActive] = useState("#progress");
+  // Initialize active from URL hash, or default to first section
+  const [active, setActive] = useState(
+    () => window.location.hash || "#progress"
+  );
 
   useEffect(() => {
-    // Set initial from hash if present, otherwise default to first section
-    setActive(window.location.hash || "#progress");
-
     const els = sectionIds
       .map((id) => document.getElementById(id))
       .filter(Boolean);
@@ -67,8 +67,8 @@ export default function DashboardHeader() {
         Bachelor of Science in Computer Science • Expected Graduation: May 2029
       </p>
 
-      {/* Section Nav */}
-      <nav className="mt-6">
+      {/* Section Nav + Reset button on the same row */}
+      <nav className="mt-6 flex items-center justify-between">
         <div className="inline-flex gap-2 rounded-full border border-slate-200 bg-white p-1 shadow-sm">
           {links.map((l) => {
             const isActive = active === l.href;
@@ -89,6 +89,15 @@ export default function DashboardHeader() {
             );
           })}
         </div>
+
+        {/* Reset button — outside the pill, right-aligned */}
+        <button
+          type="button"
+          onClick={onReset}
+          className="rounded-full border border-red-200 bg-white px-4 py-2 text-sm font-medium text-red-500 shadow-sm hover:bg-red-50 hover:text-red-600 transition"
+        >
+          Reset All Data
+        </button>
       </nav>
     </header>
   );

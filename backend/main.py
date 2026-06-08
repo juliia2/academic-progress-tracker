@@ -401,12 +401,9 @@ def api_get_dashboard(request: Request):
     # in-progress credits
     in_progress_credits = len(in_progress) * creditsPerCourse
 
-    # make electives appear in dropdown
     todo_required = compute_todo(requirements)
-    availableCourses = [
-        c for c in (todo_required + elective_codes)
-        if c not in completed and c not in in_progress
-    ]
+    # Only required courses go in the dropdown — electives use the search bar
+    availableCourses = todo_required
 
     requirementsBreakdown = [
         {
@@ -485,6 +482,23 @@ def api_add_in_progress(payload: CoursePayload, request: Request):
 # @app.get("/api/cgpa")
 # def api_get_cgpa():
 #     return {"cgpa": calculate_cgpa(course_grades)}
+
+@app.post("/api/remove_in_progress")
+def api_remove_in_progress(payload: CoursePayload, request: Request):
+    user_id = request.headers.get("x-user-id")
+    if not user_id:
+        return JSONResponse(content={"error": "Missing user ID"}, status_code=400)
+
+    data_store = get_user_data(user_id)
+    requirements = data_store["requirements"]
+
+    course = payload.course
+    # Remove from in_progress and electives if present
+    if course in requirements["in_progress"]:
+        requirements["in_progress"].remove(course)
+    requirements["electives"] = [e for e in requirements["electives"] if e["code"] != course]
+
+    return {"status": "ok"}
 
 @app.post("/api/add_grade")
 def api_add_grade(payload: GradePayload, request: Request):

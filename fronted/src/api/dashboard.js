@@ -83,6 +83,20 @@ export async function addElective(courseName, credits) {
 }
 
 /**
+ * Remove a course from in progress.
+ */
+export async function removeInProgress(course) {
+  const res = await fetch(`${API}/api/remove_in_progress`, {
+    method: "POST",
+    headers: { "Content-Type": "application/json", "x-user-id": userId },
+    body: JSON.stringify({ course }),
+  });
+
+  if (!res.ok) throw new Error("Failed to remove in-progress course");
+  return res.json();
+}
+
+/**
  * Set grade for a completed course.
  */
 export async function addGrade(course, grade) {
