@@ -1,0 +1,2666 @@
+{
+  "AHL 1120": {
+    "name": "Food Studies: A Humanities Perspective",
+    "credits": 3
+  },
+  "AHL 1302": {
+    "name": "Social Impact in Global Perspective",
+    "credits": 3
+  },
+  "AHL 1520": {
+    "name": "Études sur l’alimentation : perspective des sciences humaines",
+    "credits": 3
+  },
+  "AHL 1702": {
+    "name": "Impact social dans une perspective globale",
+    "credits": 3
+  },
+  "AHL 2110": {
+    "name": "Introduction to Animal Studies",
+    "credits": 3
+  },
+  "AHL 2140": {
+    "name": "A Transdisciplinary Exploration of Food Studies",
+    "credits": 3
+  },
+  "AHL 2150": {
+    "name": "Introduction to Contemplative Studies and Well-being",
+    "credits": 3
+  },
+  "AHL 2160": {
+    "name": "Mindful Tech",
+    "credits": 3
+  },
+  "AHL 2510": {
+    "name": "Initiation aux études animales",
+    "credits": 3
+  },
+  "AHL 2540": {
+    "name": "Étude transdisciplinaire de l’alimentation",
+    "credits": 3
+  },
+  "AHL 2550": {
+    "name": "Initiation aux études contemplatives et le bien-être",
+    "credits": 3
+  },
+  "AHL 2560": {
+    "name": "Pleine conscience et techno",
+    "credits": 3
+  },
+  "ALG 1100": {
+    "name": "Road Map to the Culture of the German-Speaking Countries",
+    "credits": 3
+  },
+  "ALG 1500": {
+    "name": "Carte routière à la culture des pays de langue allemande",
+    "credits": 3
+  },
+  "ALG 1901": {
+    "name": "Cours élémentaire d’allemand / Elementary German I",
+    "credits": 3
+  },
+  "ALG 2100": {
+    "name": "Special Topics in German Culture",
+    "credits": 3
+  },
+  "ALG 2101": {
+    "name": "Contemporary German Culture",
+    "credits": 3
+  },
+  "ALG 2300": {
+    "name": "Masterpieces of German Literature in Translation",
+    "credits": 3
+  },
+  "ALG 2500": {
+    "name": "Thèmes choisis en culture allemande",
+    "credits": 3
+  },
+  "ALG 2501": {
+    "name": "Culture allemande contemporaine",
+    "credits": 3
+  },
+  "ALG 2700": {
+    "name": "Les chefs-d’œuvre de la littérature allemande en traduction",
+    "credits": 3
+  },
+  "ARB 1911": {
+    "name": "Cours élémentaire d’arabe I / Elementary Arabic I",
+    "credits": 3
+  },
+  "ARB 2101": {
+    "name": "Arabic Culture I",
+    "credits": 3
+  },
+  "ARB 2102": {
+    "name": "Arabic Culture II",
+    "credits": 3
+  },
+  "ARB 2103": {
+    "name": "Pop Culture in the Arab World",
+    "credits": 3
+  },
+  "ARB 2501": {
+    "name": "Culture arabe I",
+    "credits": 3
+  },
+  "ARB 2502": {
+    "name": "Culture arabe II",
+    "credits": 3
+  },
+  "ARB 2503": {
+    "name": "Culture populaire dans le monde arabe",
+    "credits": 3
+  },
+  "ARB 3901": {
+    "name": "Introduction à la littérature arabe / Introduction to Arabic Literature",
+    "credits": 3
+  },
+  "ART 1305": {
+    "name": "Art and Image",
+    "credits": 3
+  },
+  "ART 1306": {
+    "name": "World Art Histories",
+    "credits": 3
+  },
+  "ART 1705": {
+    "name": "Art et image",
+    "credits": 3
+  },
+  "ART 1706": {
+    "name": "Histoires mondiales des arts",
+    "credits": 3
+  },
+  "ART 1900": {
+    "name": "Dessin d'observation : principes fondamentaux / Drawing from Life: Fundamentals",
+    "credits": 3
+  },
+  "CHN 1901": {
+    "name": "Cours élémentaire de chinois I / Introduction to Chinese I",
+    "credits": 3
+  },
+  "CHN 2101": {
+    "name": "Introduction to Chinese Culture",
+    "credits": 3
+  },
+  "CHN 2501": {
+    "name": "Introduction à la culture chinoise",
+    "credits": 3
+  },
+  "CIN 2101": {
+    "name": "History of Cinema I: 1895-1960",
+    "credits": 3
+  },
+  "CIN 2102": {
+    "name": "History of Cinema II: Since 1960",
+    "credits": 3
+  },
+  "CIN 2501": {
+    "name": "Histoire du cinéma I : 1895-1960",
+    "credits": 3
+  },
+  "CIN 2502": {
+    "name": "Histoire du cinéma II : Depuis 1960",
+    "credits": 3
+  },
+  "CLA 1101": {
+    "name": "Greek Civilization",
+    "credits": 3
+  },
+  "CLA 1102": {
+    "name": "Roman Civilization",
+    "credits": 3
+  },
+  "CLA 1501": {
+    "name": "La civilisation grecque",
+    "credits": 3
+  },
+  "CLA 1502": {
+    "name": "La civilisation romaine",
+    "credits": 3
+  },
+  "CLA 2101": {
+    "name": "The Beginnings of Greek Civilization",
+    "credits": 3
+  },
+  "CLA 2102": {
+    "name": "Athens, Persia, and Sparta",
+    "credits": 3
+  },
+  "CLA 2103": {
+    "name": "The Republic",
+    "credits": 3
+  },
+  "CLA 2104": {
+    "name": "The Early Empire",
+    "credits": 3
+  },
+  "CLA 2105": {
+    "name": "Introduction to Classical Archeology",
+    "credits": 3
+  },
+  "CLA 2110": {
+    "name": "Archaeological Methods and Techniques",
+    "credits": 3
+  },
+  "CLA 2120": {
+    "name": "Greek Art",
+    "credits": 3
+  },
+  "CLA 2121": {
+    "name": "Roman Art",
+    "credits": 3
+  },
+  "CLA 2122": {
+    "name": "Greek Wisdom",
+    "credits": 3
+  },
+  "CLA 2130": {
+    "name": "Introduction to Greek Literature",
+    "credits": 3
+  },
+  "CLA 2131": {
+    "name": "Introduction to Latin Literature",
+    "credits": 3
+  },
+  "CLA 2170": {
+    "name": "Greek and Latin Roots of Medical Terminology",
+    "credits": 3
+  },
+  "CLA 2323": {
+    "name": "Greek Mythology",
+    "credits": 3
+  },
+  "CLA 2335": {
+    "name": "Deciphering the Medieval Era: Western Europe from the 5th to the 15th Century",
+    "credits": 3
+  },
+  "CLA 2380": {
+    "name": "Greek Philosophy or the Birth of Philosophy",
+    "credits": 3
+  },
+  "CLA 2382": {
+    "name": "The World of the New Testament",
+    "credits": 3
+  },
+  "CLA 2383": {
+    "name": "Jews and Christians in Late Antiquity",
+    "credits": 3
+  },
+  "CLA 2501": {
+    "name": "Les débuts de la civilisation grecque",
+    "credits": 3
+  },
+  "CLA 2502": {
+    "name": "Athènes, la Perse et Sparte",
+    "credits": 3
+  },
+  "CLA 2503": {
+    "name": "La République",
+    "credits": 3
+  },
+  "CLA 2504": {
+    "name": "Le Haut-Empire",
+    "credits": 3
+  },
+  "CLA 2505": {
+    "name": "Initiation à l'archéologie classique",
+    "credits": 3
+  },
+  "CLA 2510": {
+    "name": "Méthodes et techniques en archéologie",
+    "credits": 3
+  },
+  "CLA 2520": {
+    "name": "L'art grec",
+    "credits": 3
+  },
+  "CLA 2521": {
+    "name": "L'art romain",
+    "credits": 3
+  },
+  "CLA 2522": {
+    "name": "La sagesse grecque",
+    "credits": 3
+  },
+  "CLA 2530": {
+    "name": "Introduction à la littérature grecque",
+    "credits": 3
+  },
+  "CLA 2531": {
+    "name": "Introduction à la littérature latine",
+    "credits": 3
+  },
+  "CLA 2570": {
+    "name": "Les racines grecques et latines de la terminologie médicale",
+    "credits": 3
+  },
+  "CLA 2723": {
+    "name": "La mythologie grecque",
+    "credits": 3
+  },
+  "CLA 2735": {
+    "name": "Décoder la période médiévale : l’occident du Ve au XVe siècle",
+    "credits": 3
+  },
+  "CLA 2780": {
+    "name": "La philosophie grecque ou la naissance de la philosophie",
+    "credits": 3
+  },
+  "CLA 2782": {
+    "name": "Le monde du Nouveau Testament",
+    "credits": 3
+  },
+  "CLA 2783": {
+    "name": "Juifs et chrétiens de l'antiquité tardive",
+    "credits": 3
+  },
+  "CLA 3110": {
+    "name": "Topics in Ancient History I",
+    "credits": 3
+  },
+  "CLA 3130": {
+    "name": "Topics in Greek and Latin Literature in Translation",
+    "credits": 3
+  },
+  "CLA 3163": {
+    "name": "Women in Early Christianity",
+    "credits": 3
+  },
+  "CLA 3333": {
+    "name": "Religions of the Graeco-Roman World",
+    "credits": 3
+  },
+  "CLA 3510": {
+    "name": "Thèmes choisis en histoire ancienne I",
+    "credits": 3
+  },
+  "CLA 3530": {
+    "name": "Thèmes choisis en littérature grecque et latine en traduction",
+    "credits": 3
+  },
+  "CLA 3563": {
+    "name": "Femme dans le christianisme des origines",
+    "credits": 3
+  },
+  "CLA 3733": {
+    "name": "Religions du monde gréco-romain",
+    "credits": 3
+  },
+  "CLT 1100": {
+    "name": "Scottish Gaelic Language and Culture I",
+    "credits": 3
+  },
+  "CLT 1110": {
+    "name": "Irish Language and Culture I",
+    "credits": 3
+  },
+  "CLT 1120": {
+    "name": "Welsh Language and Culture I",
+    "credits": 3
+  },
+  "CLT 1132": {
+    "name": "Introduction to the Celtic World",
+    "credits": 3
+  },
+  "CLT 1530": {
+    "name": "Introduction à la langue et à la culture bretonnes I",
+    "credits": 3
+  },
+  "CLT 1532": {
+    "name": "Introduction au monde celtique",
+    "credits": 3
+  },
+  "CLT 2110": {
+    "name": "The Music of the Celtic Peoples",
+    "credits": 3
+  },
+  "CLT 2130": {
+    "name": "Early Celtic Literature",
+    "credits": 3
+  },
+  "CLT 2131": {
+    "name": "Medieval Celtic Literature",
+    "credits": 3
+  },
+  "CLT 2150": {
+    "name": "Celtic Christianity",
+    "credits": 3
+  },
+  "CLT 2155": {
+    "name": "The Celtic Woman: Between Myth and Reality",
+    "credits": 3
+  },
+  "CLT 2170": {
+    "name": "Arthur of the Celts",
+    "credits": 3
+  },
+  "CLT 2300": {
+    "name": "Celtic Cultures in Transition",
+    "credits": 3
+  },
+  "CLT 2510": {
+    "name": "La musique des peuples celtiques",
+    "credits": 3
+  },
+  "CLT 3330": {
+    "name": "Special Topics in Celtic Studies",
+    "credits": 3
+  },
+  "CMN 1148": {
+    "name": "Introduction to Organizational Communication",
+    "credits": 3
+  },
+  "CMN 1160": {
+    "name": "Introduction to Media Studies",
+    "credits": 3
+  },
+  "CMN 1548": {
+    "name": "Introduction à la communication organisationnelle",
+    "credits": 3
+  },
+  "CMN 1560": {
+    "name": "Introduction à l’étude des médias",
+    "credits": 3
+  },
+  "CMN 2135": {
+    "name": "Public Speaking",
+    "credits": 3
+  },
+  "CMN 2168": {
+    "name": "Globalization and Communication",
+    "credits": 3
+  },
+  "CMN 2173": {
+    "name": "Advertising and Society",
+    "credits": 3
+  },
+  "CMN 2180": {
+    "name": "Popular Culture and Communication",
+    "credits": 3
+  },
+  "CMN 2181": {
+    "name": "Intercultural Communication",
+    "credits": 3
+  },
+  "CMN 2568": {
+    "name": "Mondialisation et communication",
+    "credits": 3
+  },
+  "CMN 2573": {
+    "name": "Publicité et société",
+    "credits": 3
+  },
+  "CMN 2580": {
+    "name": "Culture populaire et communication",
+    "credits": 3
+  },
+  "CMN 2581": {
+    "name": "Communication interculturelle",
+    "credits": 3
+  },
+  "CMN 3104": {
+    "name": "Women and Media",
+    "credits": 3
+  },
+  "CMN 3174": {
+    "name": "Advertising Techniques",
+    "credits": 3
+  },
+  "CMN 3504": {
+    "name": "Femmes et médias",
+    "credits": 3
+  },
+  "CMN 3574": {
+    "name": "Techniques publicitaires",
+    "credits": 3
+  },
+  "DCN 1100": {
+    "name": "Arts and Digital Cultures",
+    "credits": 3
+  },
+  "DCN 1300": {
+    "name": "Special Topics in Digital Cultures",
+    "credits": 3
+  },
+  "DCN 1500": {
+    "name": "Arts et la culture numérique",
+    "credits": 3
+  },
+  "DCN 1700": {
+    "name": "Thèmes choisis en cultures numériques",
+    "credits": 3
+  },
+  "EAS 1101": {
+    "name": "Introduction to Indigenous Studies",
+    "credits": 3
+  },
+  "EAS 1501": {
+    "name": "Introduction aux études autochtones",
+    "credits": 3
+  },
+  "EAS 2101": {
+    "name": "Colonialism and Indigenous Peoples",
+    "credits": 3
+  },
+  "EAS 2110": {
+    "name": "Selected Topics in Indigenous Studies I",
+    "credits": 3
+  },
+  "EAS 2501": {
+    "name": "Colonialisme et peuples autochtones",
+    "credits": 3
+  },
+  "EAS 2510": {
+    "name": "Thèmes choisis en études autochtones I",
+    "credits": 3
+  },
+  "EAS 3103": {
+    "name": "Indigenous Spiritualities in the Americas",
+    "credits": 3
+  },
+  "EAS 3503": {
+    "name": "Spiritualités autochtones dans les Amériques",
+    "credits": 3
+  },
+  "ELA 1102": {
+    "name": "Latin American Cultures I",
+    "credits": 3
+  },
+  "ELA 1502": {
+    "name": "Cultures de l'Amérique latine I",
+    "credits": 3
+  },
+  "ELA 2102": {
+    "name": "Latin American Cultures II",
+    "credits": 3
+  },
+  "ELA 2502": {
+    "name": "Cultures de l'Amérique latine II",
+    "credits": 3
+  },
+  "ELA 3110": {
+    "name": "Selected Topics in Latin American Studies: Cultural Issues",
+    "credits": 3
+  },
+  "ELA 3510": {
+    "name": "Thèmes choisis en études latino-américaines : enjeux culturels",
+    "credits": 3
+  },
+  "ENG 2105": {
+    "name": "Introduction to British Literature I: Beginnings to 1700",
+    "credits": 3
+  },
+  "ENG 2106": {
+    "name": "Introduction to British Literature II: 1700 to the Present",
+    "credits": 3
+  },
+  "ENG 2107": {
+    "name": "Introduction to Canadian Literature",
+    "credits": 3
+  },
+  "ENG 2108": {
+    "name": "Introduction to American Literature",
+    "credits": 3
+  },
+  "ENG 2110": {
+    "name": "Children's Literature",
+    "credits": 3
+  },
+  "ENG 2111": {
+    "name": "Canadian Children's Literature",
+    "credits": 3
+  },
+  "ENG 2112": {
+    "name": "Classical Backgrounds of English Literature",
+    "credits": 3
+  },
+  "ENG 2113": {
+    "name": "The Bible and the History of English Literature",
+    "credits": 3
+  },
+  "ENG 2114": {
+    "name": "Women and Literature to 1900",
+    "credits": 3
+  },
+  "ENG 2115": {
+    "name": "Women and Literature 1900 to the Present",
+    "credits": 3
+  },
+  "ENG 2116": {
+    "name": "Writing Out: Literature and Sexual Identity",
+    "credits": 3
+  },
+  "ENG 2117": {
+    "name": "Multicultural Literatures",
+    "credits": 3
+  },
+  "ENG 2118": {
+    "name": "Comic Books and Graphic Novels",
+    "credits": 3
+  },
+  "ENG 2120": {
+    "name": "Tales of Mystery and Detection",
+    "credits": 3
+  },
+  "ENG 2130": {
+    "name": "Tradition of King Arthur",
+    "credits": 3
+  },
+  "ENG 2131": {
+    "name": "Fantasy Literature",
+    "credits": 3
+  },
+  "ENG 2132": {
+    "name": "Utopian Fiction",
+    "credits": 3
+  },
+  "ENG 2133": {
+    "name": "Literature, Madness, and Desire",
+    "credits": 3
+  },
+  "ENG 2135": {
+    "name": "Science Fiction",
+    "credits": 3
+  },
+  "ENG 2136": {
+    "name": "Fiction of Horror",
+    "credits": 3
+  },
+  "ENG 2140": {
+    "name": "Literature and Film",
+    "credits": 3
+  },
+  "ENG 2141": {
+    "name": "Literature and the Environment",
+    "credits": 3
+  },
+  "ENG 2142": {
+    "name": "World Literatures in English",
+    "credits": 3
+  },
+  "ENG 2151": {
+    "name": "Literature and the Sciences",
+    "credits": 3
+  },
+  "ENG 2175": {
+    "name": "Introduction to the Literatures of Asia and the Diaspora",
+    "credits": 3
+  },
+  "ENG 2176": {
+    "name": "Introduction to the Literatures of Africa and the Diaspora",
+    "credits": 3
+  },
+  "ENG 2180": {
+    "name": "Critical Conversations: Sex and Gender Identities",
+    "credits": 3
+  },
+  "ENG 2181": {
+    "name": "Critical Conversations: Race and Decolonization",
+    "credits": 3
+  },
+  "ENG 2182": {
+    "name": "Critical Conversations: Environmental Humanities",
+    "credits": 3
+  },
+  "ENG 2183": {
+    "name": "Critical Conversations: Class, Capitalism, and Culture",
+    "credits": 3
+  },
+  "ENG 2184": {
+    "name": "Critical Conversations: Form and Style",
+    "credits": 3
+  },
+  "ENG 2185": {
+    "name": "Critical Conversations: Special Topics",
+    "credits": 3
+  },
+  "ENG 2313": {
+    "name": "European Contexts of English Literature",
+    "credits": 3
+  },
+  "ENG 3171": {
+    "name": "Communication in the Information Age",
+    "credits": 3
+  },
+  "ENV 1101": {
+    "name": "Global Environmental Challenges",
+    "credits": 3
+  },
+  "ENV 1501": {
+    "name": "Les défis environnementaux globaux",
+    "credits": 3
+  },
+  "ENV 2108": {
+    "name": "Contested Places",
+    "credits": 3
+  },
+  "ENV 2110": {
+    "name": "Sustainable Cities",
+    "credits": 3
+  },
+  "ENV 2301": {
+    "name": "History of Environmental Thought",
+    "credits": 3
+  },
+  "ENV 2304": {
+    "name": "Climatology",
+    "credits": 3
+  },
+  "ENV 2508": {
+    "name": "Espaces sous tension",
+    "credits": 3
+  },
+  "ENV 2510": {
+    "name": "Villes durables",
+    "credits": 3
+  },
+  "ENV 2701": {
+    "name": "Histoire de la pensée environnementale",
+    "credits": 3
+  },
+  "ENV 2704": {
+    "name": "Climatologie",
+    "credits": 3
+  },
+  "ENV 3101": {
+    "name": "Legal Context of Environmental Issues",
+    "credits": 3
+  },
+  "ENV 3303": {
+    "name": "Health Geography",
+    "credits": 3
+  },
+  "ENV 3501": {
+    "name": "Contexte juridique des enjeux environnementaux",
+    "credits": 3
+  },
+  "ENV 3702": {
+    "name": "Gestion des ressources naturelles et de l'environnement",
+    "credits": 3
+  },
+  "ESP 1101": {
+    "name": "Introduction to Spanish Culture",
+    "credits": 3
+  },
+  "ESP 1102": {
+    "name": "Introduction to Spanish American Culture",
+    "credits": 3
+  },
+  "ESP 1501": {
+    "name": "Introduction à la culture espagnole",
+    "credits": 3
+  },
+  "ESP 1502": {
+    "name": "Introduction à la culture hispano-américaine",
+    "credits": 3
+  },
+  "ESP 1991": {
+    "name": "Cours élémentaire d’espagnol I / Elementary Spanish I",
+    "credits": 3
+  },
+  "ESP 2100": {
+    "name": "Special Topics in Spanish and Latin American Culture",
+    "credits": 3
+  },
+  "ESP 2101": {
+    "name": "Spanish and Latin American Cinema",
+    "credits": 3
+  },
+  "ESP 2102": {
+    "name": "Great Hispanic Authors",
+    "credits": 3
+  },
+  "ESP 2301": {
+    "name": "Hispanic Literature in translation",
+    "credits": 3
+  },
+  "ESP 2302": {
+    "name": "Spanish in the World",
+    "credits": 3
+  },
+  "ESP 2303": {
+    "name": "Spanish Across Time and Cultures",
+    "credits": 3
+  },
+  "ESP 2304": {
+    "name": "Women in Hispanic Culture and Literature",
+    "credits": 3
+  },
+  "ESP 2500": {
+    "name": "Thèmes choisis en culture espagnole et latino-américaine",
+    "credits": 3
+  },
+  "ESP 2501": {
+    "name": "Cinéma espagnol et latino-américain",
+    "credits": 3
+  },
+  "ESP 2502": {
+    "name": "Grands auteurs hispaniques",
+    "credits": 3
+  },
+  "ESP 2701": {
+    "name": "Littérature hispanique en traduction",
+    "credits": 3
+  },
+  "ESP 2702": {
+    "name": "L'espagnol dans le monde",
+    "credits": 3
+  },
+  "ESP 2703": {
+    "name": "L'espagnol à travers les âges et les cultures",
+    "credits": 3
+  },
+  "ESP 2704": {
+    "name": "Les femmes dans la culture et la littérature hispaniques",
+    "credits": 3
+  },
+  "FRA 1705": {
+    "name": "Perfectionnement du français",
+    "credits": 3
+  },
+  "FRA 1746": {
+    "name": "Littérature française : des origines au XVIIIe siècle",
+    "credits": 3
+  },
+  "FRA 1748": {
+    "name": "Littératures française et québécoise : du XIXe siècle à nos jours",
+    "credits": 3
+  },
+  "FRA 1750": {
+    "name": "Culture et littérature du Canada français, de la Nouvelle-France à nos jours",
+    "credits": 3
+  },
+  "FRA 2520": {
+    "name": "Éviter les pièges de la langue",
+    "credits": 3
+  },
+  "FRA 2530": {
+    "name": "La littérature et la femme",
+    "credits": 3
+  },
+  "FRA 2540": {
+    "name": "Paralittératures",
+    "credits": 3
+  },
+  "FRA 2541": {
+    "name": "Littératures francophones d'Afrique et des Antilles",
+    "credits": 3
+  },
+  "FRA 2542": {
+    "name": "Littératures francophones de l'Afrique du Nord et du Proche Orient",
+    "credits": 3
+  },
+  "FRA 2545": {
+    "name": "Littérature et culture de l’Ontario français",
+    "credits": 3
+  },
+  "FRA 2547": {
+    "name": "Francophonies européennes",
+    "credits": 3
+  },
+  "FRA 2555": {
+    "name": "Adapter son message au destinataire",
+    "credits": 3
+  },
+  "FRA 2560": {
+    "name": "Création littéraire I",
+    "credits": 3
+  },
+  "FRA 2565": {
+    "name": "Programme de lecture",
+    "credits": 3
+  },
+  "FRA 2700": {
+    "name": "Développer sa méthode de travail",
+    "credits": 3
+  },
+  "FRA 2705": {
+    "name": "Écrire avec concision et clarté",
+    "credits": 3
+  },
+  "FRA 2713": {
+    "name": "Le roman policier",
+    "credits": 3
+  },
+  "FRA 2715": {
+    "name": "La littérature pour la jeunesse",
+    "credits": 3
+  },
+  "FRA 2723": {
+    "name": "Littérature et cinéma",
+    "credits": 3
+  },
+  "FRA 2730": {
+    "name": "Le théâtre",
+    "credits": 3
+  },
+  "FRA 2732": {
+    "name": "Initiation aux approches critiques",
+    "credits": 3
+  },
+  "FRA 2735": {
+    "name": "La bande dessinée",
+    "credits": 3
+  },
+  "FRA 2736": {
+    "name": "Horreur et fantastique",
+    "credits": 3
+  },
+  "FRA 2737": {
+    "name": "Sport et littérature",
+    "credits": 3
+  },
+  "FRA 2740": {
+    "name": "La poésie",
+    "credits": 3
+  },
+  "FRA 2780": {
+    "name": "Le récit",
+    "credits": 3
+  },
+  "FRA 2789": {
+    "name": "Comprendre les rouages de la grammaire",
+    "credits": 3
+  },
+  "GEG 1302": {
+    "name": "Places and Spaces of Human Activity",
+    "credits": 3
+  },
+  "GEG 1702": {
+    "name": "Espaces et lieux de l'activité humaine",
+    "credits": 3
+  },
+  "GEG 2108": {
+    "name": "Contested Places",
+    "credits": 3
+  },
+  "GEG 2110": {
+    "name": "Sustainable Cities",
+    "credits": 3
+  },
+  "GEG 2301": {
+    "name": "Geomorphology",
+    "credits": 3
+  },
+  "GEG 2304": {
+    "name": "Climatology",
+    "credits": 3
+  },
+  "GEG 2320": {
+    "name": "GIS and the Digital Earth",
+    "credits": 3
+  },
+  "GEG 2508": {
+    "name": "Espaces sous tension",
+    "credits": 3
+  },
+  "GEG 2510": {
+    "name": "Villes durables",
+    "credits": 3
+  },
+  "GEG 2701": {
+    "name": "Géomorphologie",
+    "credits": 3
+  },
+  "GEG 2704": {
+    "name": "Climatologie",
+    "credits": 3
+  },
+  "GEG 2720": {
+    "name": "SIG et la Terre numérique",
+    "credits": 3
+  },
+  "GEG 3106": {
+    "name": "Cities and Social Change",
+    "credits": 3
+  },
+  "GEG 3107": {
+    "name": "Geography and Polar Regions",
+    "credits": 3
+  },
+  "GEG 3300": {
+    "name": "Selected Topics in Human Geography",
+    "credits": 3
+  },
+  "GEG 3302": {
+    "name": "Natural Resource and Environmental Management",
+    "credits": 3
+  },
+  "GEG 3305": {
+    "name": "Geographies of Globalization",
+    "credits": 3
+  },
+  "GEG 3309": {
+    "name": "Social Landscapes of Métis Communities",
+    "credits": 3
+  },
+  "GEG 3322": {
+    "name": "Geography of Urban Transportation",
+    "credits": 3
+  },
+  "GEG 3506": {
+    "name": "Villes en mutation",
+    "credits": 3
+  },
+  "GEG 3522": {
+    "name": "Espace social",
+    "credits": 3
+  },
+  "GEG 3524": {
+    "name": "Histoire de la géographie",
+    "credits": 3
+  },
+  "GEG 3525": {
+    "name": "Territoires de la Francophonie",
+    "credits": 3
+  },
+  "GEG 3700": {
+    "name": "Thèmes choisis en géographie physique",
+    "credits": 3
+  },
+  "GEG 3702": {
+    "name": "Gestion des ressources naturelles et de l'environnement",
+    "credits": 3
+  },
+  "GEG 3704": {
+    "name": "Villes du monde",
+    "credits": 3
+  },
+  "GEG 3707": {
+    "name": "Patrimoine urbain",
+    "credits": 3
+  },
+  "HIS 1101": {
+    "name": "The Making of Canada",
+    "credits": 3
+  },
+  "HIS 1110": {
+    "name": "Introduction to Global History",
+    "credits": 3
+  },
+  "HIS 1111": {
+    "name": "The Twentieth-Century World from 1945",
+    "credits": 3
+  },
+  "HIS 1120": {
+    "name": "What is Europe? (16th-21st Century)",
+    "credits": 3
+  },
+  "HIS 1501": {
+    "name": "La formation du Canada",
+    "credits": 3
+  },
+  "HIS 1510": {
+    "name": "Initiation à l'histoire globale",
+    "credits": 3
+  },
+  "HIS 1511": {
+    "name": "Le monde au XXe siècle depuis 1945",
+    "credits": 3
+  },
+  "HIS 1520": {
+    "name": "Qu'est-ce que l'Europe? (16e-21e siècle)",
+    "credits": 3
+  },
+  "HIS 2101": {
+    "name": "The Beginnings of Greek Civilization",
+    "credits": 3
+  },
+  "HIS 2102": {
+    "name": "Athens, Persia, and Sparta",
+    "credits": 3
+  },
+  "HIS 2103": {
+    "name": "The Republic",
+    "credits": 3
+  },
+  "HIS 2104": {
+    "name": "The Early Empire",
+    "credits": 3
+  },
+  "HIS 2105": {
+    "name": "History of the Jews in Canada",
+    "credits": 3
+  },
+  "HIS 2116": {
+    "name": "Imperial Russia From 1613 to the 1917 Revolution",
+    "credits": 3
+  },
+  "HIS 2117": {
+    "name": "History of the USSR",
+    "credits": 3
+  },
+  "HIS 2129": {
+    "name": "Technology, Society and Environment Since 1800",
+    "credits": 3
+  },
+  "HIS 2151": {
+    "name": "The United States from 1750 to 1877",
+    "credits": 3
+  },
+  "HIS 2152": {
+    "name": "The United States from 1877 to 1945",
+    "credits": 3
+  },
+  "HIS 2153": {
+    "name": "The United States from 1945 to the Present",
+    "credits": 3
+  },
+  "HIS 2160": {
+    "name": "History of the Middle East from World War I",
+    "credits": 3
+  },
+  "HIS 2170": {
+    "name": "Latin America, Colonial Period",
+    "credits": 3
+  },
+  "HIS 2171": {
+    "name": "Latin America, Modern Period",
+    "credits": 3
+  },
+  "HIS 2175": {
+    "name": "Southeast Asian Civilizations to the 18th Century",
+    "credits": 3
+  },
+  "HIS 2176": {
+    "name": "Southeast Asian Civilizations from the 18th Century to the Present",
+    "credits": 3
+  },
+  "HIS 2177": {
+    "name": "History of East Asia from Antiquity to 1600",
+    "credits": 3
+  },
+  "HIS 2178": {
+    "name": "History of East Asia from 1600 to the Present",
+    "credits": 3
+  },
+  "HIS 2182": {
+    "name": "Women in Canada",
+    "credits": 3
+  },
+  "HIS 2185": {
+    "name": "Gender and Sexuality in Historical Perspective",
+    "credits": 3
+  },
+  "HIS 2300": {
+    "name": "Global Environmental History",
+    "credits": 3
+  },
+  "HIS 2307": {
+    "name": "History of the Native Peoples in Canada, from the origins to the present",
+    "credits": 3
+  },
+  "HIS 2326": {
+    "name": "The History of the British Empire",
+    "credits": 3
+  },
+  "HIS 2335": {
+    "name": "Deciphering the Medieval Era: Western Europe from the 5th to the 15th Century",
+    "credits": 3
+  },
+  "HIS 2336": {
+    "name": "Early Modern Europe, 16th to 18th Century",
+    "credits": 3
+  },
+  "HIS 2341": {
+    "name": "Europe in the 19th Century",
+    "credits": 3
+  },
+  "HIS 2342": {
+    "name": "Europe in the 20th Century",
+    "credits": 3
+  },
+  "HIS 2350": {
+    "name": "Selected Topics in Modern History",
+    "credits": 3
+  },
+  "HIS 2351": {
+    "name": "Selected Topics in Contemporary History",
+    "credits": 3
+  },
+  "HIS 2355": {
+    "name": "Nation-Building in Central Europe",
+    "credits": 3
+  },
+  "HIS 2362": {
+    "name": "British North America, 1763-1867",
+    "credits": 3
+  },
+  "HIS 2363": {
+    "name": "Canada, 1867-1939",
+    "credits": 3
+  },
+  "HIS 2364": {
+    "name": "Contemporary Canada",
+    "credits": 3
+  },
+  "HIS 2376": {
+    "name": "The African Past",
+    "credits": 3
+  },
+  "HIS 2501": {
+    "name": "Les débuts de la civilisation grecque",
+    "credits": 3
+  },
+  "HIS 2502": {
+    "name": "Athènes, la Perse et Sparte",
+    "credits": 3
+  },
+  "HIS 2503": {
+    "name": "La république",
+    "credits": 3
+  },
+  "HIS 2504": {
+    "name": "Le Haut-Empire",
+    "credits": 3
+  },
+  "HIS 2505": {
+    "name": "Histoire des juifs au Canada",
+    "credits": 3
+  },
+  "HIS 2516": {
+    "name": "La Russie impériale de 1613 à la révolution de 1917",
+    "credits": 3
+  },
+  "HIS 2517": {
+    "name": "Histoire de l'U.R.S.S.",
+    "credits": 3
+  },
+  "HIS 2529": {
+    "name": "Technologies, société et environnement depuis 1800",
+    "credits": 3
+  },
+  "HIS 2551": {
+    "name": "Histoire des États-Unis de 1750 à 1877",
+    "credits": 3
+  },
+  "HIS 2552": {
+    "name": "Histoire des États-Unis de 1877 à 1945",
+    "credits": 3
+  },
+  "HIS 2553": {
+    "name": "Les États-Unis depuis 1945",
+    "credits": 3
+  },
+  "HIS 2560": {
+    "name": "Histoire du Moyen-Orient depuis la Première Guerre mondiale",
+    "credits": 3
+  },
+  "HIS 2570": {
+    "name": "Amérique latine, époque coloniale",
+    "credits": 3
+  },
+  "HIS 2571": {
+    "name": "Amérique latine, époque contemporaine",
+    "credits": 3
+  },
+  "HIS 2575": {
+    "name": "Civilisations de l'Asie du Sud-Est jusqu'au XVIIIe siècle",
+    "credits": 3
+  },
+  "HIS 2576": {
+    "name": "Civilisations de l’Asie du Sud-Est du XVIIIe siècle à nos jours",
+    "credits": 3
+  },
+  "HIS 2577": {
+    "name": "Histoire de l'Asie de l'Est de l'antiquité à 1600",
+    "credits": 3
+  },
+  "HIS 2578": {
+    "name": "Histoire de l'Asie de l'Est de 1600 à nos jours",
+    "credits": 3
+  },
+  "HIS 2582": {
+    "name": "Les femmes au Canada",
+    "credits": 3
+  },
+  "HIS 2585": {
+    "name": "Genre et sexualité dans une perspective historique",
+    "credits": 3
+  },
+  "HIS 2700": {
+    "name": "Histoire mondiale de l'environnement",
+    "credits": 3
+  },
+  "HIS 2707": {
+    "name": "Histoire des Amérindiens au Canada, des origines à nos jours",
+    "credits": 3
+  },
+  "HIS 2708": {
+    "name": "Histoire des francophonies nord-américaines",
+    "credits": 3
+  },
+  "HIS 2735": {
+    "name": "Décoder la période médiévale : l’occident du Ve au XVe siècle",
+    "credits": 3
+  },
+  "HIS 2736": {
+    "name": "L’Europe moderne (XVIe-XVIIIe siècle)",
+    "credits": 3
+  },
+  "HIS 2741": {
+    "name": "L'Europe au XIXe siècle",
+    "credits": 3
+  },
+  "HIS 2742": {
+    "name": "L'Europe au XXe siècle",
+    "credits": 3
+  },
+  "HIS 2750": {
+    "name": "Thèmes choisis en histoire moderne",
+    "credits": 3
+  },
+  "HIS 2751": {
+    "name": "Thèmes choisis en histoire contemporaine",
+    "credits": 3
+  },
+  "HIS 2755": {
+    "name": "L'Europe centrale et orientale de 1815 à nos jours",
+    "credits": 3
+  },
+  "HIS 2762": {
+    "name": "L’Amérique du Nord britannique 1763-1867",
+    "credits": 3
+  },
+  "HIS 2763": {
+    "name": "Le Canada de 1867 à 1939",
+    "credits": 3
+  },
+  "HIS 2764": {
+    "name": "Le Canada contemporain",
+    "credits": 3
+  },
+  "HIS 2776": {
+    "name": "Le passé africain",
+    "credits": 3
+  },
+  "ILA 1901": {
+    "name": "Cours élémentaire de langue autochtone I / Elementary Indigenous Language Course I",
+    "credits": 3
+  },
+  "ITA 1114": {
+    "name": "Italian Heritage in North America",
+    "credits": 3
+  },
+  "ITA 1514": {
+    "name": "L'héritage italien en Amérique du Nord",
+    "credits": 3
+  },
+  "ITA 1911": {
+    "name": "Cours élémentaire d’italien I / Elementary Italian I",
+    "credits": 3
+  },
+  "ITA 2105": {
+    "name": "Introduction to Italian Culture I",
+    "credits": 3
+  },
+  "ITA 2113": {
+    "name": "Italian Culture",
+    "credits": 3
+  },
+  "ITA 2114": {
+    "name": "Italian Literature",
+    "credits": 3
+  },
+  "ITA 2513": {
+    "name": "La culture italienne",
+    "credits": 3
+  },
+  "ITA 2514": {
+    "name": "La littérature italienne",
+    "credits": 3
+  },
+  "JCS 2105": {
+    "name": "History of the Jews of Canada",
+    "credits": 3
+  },
+  "JCS 2301": {
+    "name": "Introduction to Jewish Canadian Studies",
+    "credits": 3
+  },
+  "JCS 2505": {
+    "name": "L’histoire des Juifs du Canada",
+    "credits": 3
+  },
+  "JCS 2701": {
+    "name": "Introduction aux études juives canadiennes",
+    "credits": 3
+  },
+  "JCS 3102": {
+    "name": "Selected Topics in Jewish Canadian Studies",
+    "credits": 3
+  },
+  "JCS 3383": {
+    "name": "Jewish Canadian Writers",
+    "credits": 3
+  },
+  "JCS 3502": {
+    "name": "Thèmes choisis en études juives canadiennes",
+    "credits": 3
+  },
+  "JPN 1901": {
+    "name": "Cours élémentaire de japonais I / Introduction to Japanese I",
+    "credits": 3
+  },
+  "JPN 2101": {
+    "name": "Introduction to Japanese Culture",
+    "credits": 3
+  },
+  "JPN 2501": {
+    "name": "Introduction à la culture japonaise",
+    "credits": 3
+  },
+  "LCL 1101": {
+    "name": "Latin I",
+    "credits": 3
+  },
+  "LCL 1501": {
+    "name": "Latin I",
+    "credits": 3
+  },
+  "LCM 1101": {
+    "name": "How to Learn Foreign Languages",
+    "credits": 3
+  },
+  "LCM 1102": {
+    "name": "Tools for Cultural Analysis",
+    "credits": 3
+  },
+  "LCM 1501": {
+    "name": "Comment apprendre les langues étrangères",
+    "credits": 3
+  },
+  "LCM 1502": {
+    "name": "Outils d’analyse culturelle",
+    "credits": 3
+  },
+  "LCM 1901": {
+    "name": "Langue et culture choisies I / Selected Language and Culture I",
+    "credits": 3
+  },
+  "LCM 1902": {
+    "name": "Langue et culture choisies II / Selected Language and Culture II",
+    "credits": 3
+  },
+  "LIN 1300": {
+    "name": "What Is Language?",
+    "credits": 3
+  },
+  "LIN 1303": {
+    "name": "Language and Mind",
+    "credits": 3
+  },
+  "LIN 1315": {
+    "name": "Introduction to Linguistics",
+    "credits": 3
+  },
+  "LIN 1340": {
+    "name": "Language in Society",
+    "credits": 3
+  },
+  "LIN 1700": {
+    "name": "Qu’est-ce que le langage?",
+    "credits": 3
+  },
+  "LIN 1703": {
+    "name": "Le langage et l'esprit",
+    "credits": 3
+  },
+  "LIN 1715": {
+    "name": "Introduction à la linguistique",
+    "credits": 3
+  },
+  "LIN 1740": {
+    "name": "Langue et société",
+    "credits": 3
+  },
+  "LIN 2300": {
+    "name": "The World's Languages",
+    "credits": 3
+  },
+  "LIN 2301": {
+    "name": "Aboriginal Language",
+    "credits": 3
+  },
+  "LIN 2304": {
+    "name": "Writing Systems",
+    "credits": 3
+  },
+  "LIN 2700": {
+    "name": "Les langues dans le monde",
+    "credits": 3
+  },
+  "LIN 2701": {
+    "name": "Langue autochtone",
+    "credits": 3
+  },
+  "LIN 2704": {
+    "name": "Systèmes d'écriture",
+    "credits": 3
+  },
+  "LLM 1100": {
+    "name": "Literatures and Cultures of the World",
+    "credits": 3
+  },
+  "LLM 1500": {
+    "name": "Littératures et cultures du monde",
+    "credits": 3
+  },
+  "MDV 2100": {
+    "name": "Introduction to Medieval and Renaissance Civilization",
+    "credits": 3
+  },
+  "MDV 2500": {
+    "name": "Initiation à la civilisation médiévale et de la Renaissance",
+    "credits": 3
+  },
+  "MUS 1301": {
+    "name": "Topics in Music Appreciation I",
+    "credits": 3
+  },
+  "MUS 1302": {
+    "name": "Topics in Music Appreciation II",
+    "credits": 3
+  },
+  "MUS 1303": {
+    "name": "Materials of Music I",
+    "credits": 3
+  },
+  "MUS 1703": {
+    "name": "Éléments de musique I",
+    "credits": 3
+  },
+  "MUS 2304": {
+    "name": "The Sound of Rock",
+    "credits": 3
+  },
+  "MUS 2310": {
+    "name": "Music in the Movies",
+    "credits": 3
+  },
+  "MUS 2382": {
+    "name": "Introduction to World Music",
+    "credits": 3
+  },
+  "MUS 2704": {
+    "name": "Le son rock",
+    "credits": 3
+  },
+  "MUS 2710": {
+    "name": "La musique de cinéma",
+    "credits": 3
+  },
+  "MUS 2782": {
+    "name": "Introduction aux musiques du monde",
+    "credits": 3
+  },
+  "MUS 3305": {
+    "name": "Music and Critical Thought",
+    "credits": 3
+  },
+  "MUS 3308": {
+    "name": "Popular Music in Society",
+    "credits": 3
+  },
+  "PHI 2100": {
+    "name": "Animal Ethics",
+    "credits": 3
+  },
+  "PHI 2122": {
+    "name": "Ancient Wisdom",
+    "credits": 3
+  },
+  "PHI 2125": {
+    "name": "Philosophy of Cognitive Science",
+    "credits": 3
+  },
+  "PHI 2170": {
+    "name": "Logic I",
+    "credits": 3
+  },
+  "PHI 2172": {
+    "name": "Philosophy of Mind",
+    "credits": 3
+  },
+  "PHI 2174": {
+    "name": "Ethics",
+    "credits": 3
+  },
+  "PHI 2183": {
+    "name": "Political Philosophy",
+    "credits": 3
+  },
+  "PHI 2186": {
+    "name": "Philosophy of the Social Sciences",
+    "credits": 3
+  },
+  "PHI 2190": {
+    "name": "Philosophy of Religion",
+    "credits": 3
+  },
+  "PHI 2197": {
+    "name": "Philosophy of History",
+    "credits": 3
+  },
+  "PHI 2380": {
+    "name": "Greek Philosophy or the Birth of Philosophy",
+    "credits": 3
+  },
+  "PHI 2381": {
+    "name": "Arabic Philosophy",
+    "credits": 3
+  },
+  "PHI 2382": {
+    "name": "Philosophy in the Middle Ages",
+    "credits": 3
+  },
+  "PHI 2383": {
+    "name": "Modern Philosophy",
+    "credits": 3
+  },
+  "PHI 2385": {
+    "name": "Ethical Questions",
+    "credits": 3
+  },
+  "PHI 2386": {
+    "name": "Existentialism",
+    "credits": 3
+  },
+  "PHI 2387": {
+    "name": "Philosophy of the Enlightenment",
+    "credits": 3
+  },
+  "PHI 2389": {
+    "name": "Asian Philosophy",
+    "credits": 3
+  },
+  "PHI 2390": {
+    "name": "Philosophy of Feminism and Gender",
+    "credits": 3
+  },
+  "PHI 2391": {
+    "name": "Philosophy of Science",
+    "credits": 3
+  },
+  "PHI 2392": {
+    "name": "Aesthetics and Philosophy of Art",
+    "credits": 3
+  },
+  "PHI 2393": {
+    "name": "Philosophy of Culture",
+    "credits": 3
+  },
+  "PHI 2399": {
+    "name": "Questions in Political Philosophy",
+    "credits": 3
+  },
+  "PHI 2500": {
+    "name": "Éthique animale",
+    "credits": 3
+  },
+  "PHI 2522": {
+    "name": "La sagesse ancienne",
+    "credits": 3
+  },
+  "PHI 2525": {
+    "name": "Philosophie des sciences cognitives",
+    "credits": 3
+  },
+  "PHI 2570": {
+    "name": "Logique I",
+    "credits": 3
+  },
+  "PHI 2572": {
+    "name": "Philosophie de l'esprit",
+    "credits": 3
+  },
+  "PHI 2574": {
+    "name": "Éthique",
+    "credits": 3
+  },
+  "PHI 2583": {
+    "name": "Philosophie politique",
+    "credits": 3
+  },
+  "PHI 2586": {
+    "name": "Philosophie des sciences sociales",
+    "credits": 3
+  },
+  "PHI 2590": {
+    "name": "Philosophie de la religion",
+    "credits": 3
+  },
+  "PHI 2597": {
+    "name": "Philosophie de l'histoire",
+    "credits": 3
+  },
+  "PHI 2780": {
+    "name": "La Philosophie grecque ou la naissance de la philosophie",
+    "credits": 3
+  },
+  "PHI 2781": {
+    "name": "Philosophie arabe",
+    "credits": 3
+  },
+  "PHI 2782": {
+    "name": "La Philosophie au Moyen-Âge",
+    "credits": 3
+  },
+  "PHI 2783": {
+    "name": "Philosophie moderne",
+    "credits": 3
+  },
+  "PHI 2785": {
+    "name": "Enjeux éthiques",
+    "credits": 3
+  },
+  "PHI 2786": {
+    "name": "Existentialisme",
+    "credits": 3
+  },
+  "PHI 2787": {
+    "name": "La philosophie des Lumières",
+    "credits": 3
+  },
+  "PHI 2789": {
+    "name": "Philosophie asiatique",
+    "credits": 3
+  },
+  "PHI 2790": {
+    "name": "Philosophie du féminisme et du genre",
+    "credits": 3
+  },
+  "PHI 2791": {
+    "name": "Philosophie des sciences",
+    "credits": 3
+  },
+  "PHI 2792": {
+    "name": "Esthétique et philosophie de l'art",
+    "credits": 3
+  },
+  "PHI 2793": {
+    "name": "Philosophie de la culture",
+    "credits": 3
+  },
+  "PHI 2795": {
+    "name": "Philosophie du droit",
+    "credits": 3
+  },
+  "PHI 2799": {
+    "name": "Enjeux en philosophie politique",
+    "credits": 3
+  },
+  "PLN 1901": {
+    "name": "Cours élémentaire de Polonais I / Elementary Polish I",
+    "credits": 3
+  },
+  "PLN 2101": {
+    "name": "Polish Culture Through the Ages",
+    "credits": 3
+  },
+  "PLN 2102": {
+    "name": "Polish Post-War Cinema",
+    "credits": 3
+  },
+  "PLN 2501": {
+    "name": "Initiation à la culture polonaise",
+    "credits": 3
+  },
+  "PLN 2502": {
+    "name": "Cinéma polonais d'après-guerre",
+    "credits": 3
+  },
+  "POR 1901": {
+    "name": "Cours élémentaire de portugais I / Elementary Portuguese I",
+    "credits": 3
+  },
+  "POR 2101": {
+    "name": "The Culture of Portuguese-Speaking Countries I",
+    "credits": 3
+  },
+  "POR 2102": {
+    "name": "The Culture of Portuguese-Speaking Countries II",
+    "credits": 3
+  },
+  "POR 2501": {
+    "name": "Culture des pays de langue portugaise I",
+    "credits": 3
+  },
+  "POR 2502": {
+    "name": "Culture des pays de langue portugaise II",
+    "credits": 3
+  },
+  "RUS 1901": {
+    "name": "Cours élémentaire de russe I / Elementary Russian I",
+    "credits": 3
+  },
+  "RUS 2101": {
+    "name": "Introduction to Russian Culture",
+    "credits": 3
+  },
+  "RUS 2102": {
+    "name": "The Age of Dostoevsky and Tolstoy",
+    "credits": 3
+  },
+  "RUS 2103": {
+    "name": "Contemporary Russian Culture",
+    "credits": 3
+  },
+  "RUS 2104": {
+    "name": "Russian Cinema",
+    "credits": 3
+  },
+  "RUS 2105": {
+    "name": "Women in Russian Culture and Literature",
+    "credits": 3
+  },
+  "RUS 2116": {
+    "name": "History of Russia Until 1917",
+    "credits": 3
+  },
+  "RUS 2117": {
+    "name": "History of the USSR",
+    "credits": 3
+  },
+  "RUS 2501": {
+    "name": "Initiation à la culture russe",
+    "credits": 3
+  },
+  "RUS 2502": {
+    "name": "Dostoïevski, Tolstoï et leur époque",
+    "credits": 3
+  },
+  "RUS 2503": {
+    "name": "Culture russe contemporaine",
+    "credits": 3
+  },
+  "RUS 2504": {
+    "name": "Cinéma russe",
+    "credits": 3
+  },
+  "RUS 2505": {
+    "name": "Les femmes dans la culture et la littérature russe",
+    "credits": 3
+  },
+  "RUS 2516": {
+    "name": "La Russie impériale de 1613 à la Révolution de 1917",
+    "credits": 3
+  },
+  "RUS 2517": {
+    "name": "Histoire de l'URSS",
+    "credits": 3
+  },
+  "SRS 1110": {
+    "name": "Witchcraft, Magic and Occult Traditions",
+    "credits": 3
+  },
+  "SRS 1112": {
+    "name": "The Religions of the World I",
+    "credits": 3
+  },
+  "SRS 1130": {
+    "name": "Atheism: A History of Doubt",
+    "credits": 3
+  },
+  "SRS 1191": {
+    "name": "Accommodations and Conflicts: Religion in Contemporary Canada",
+    "credits": 3
+  },
+  "SRS 1510": {
+    "name": "Magie, sorcellerie et traditions occultes",
+    "credits": 3
+  },
+  "SRS 1512": {
+    "name": "Les religions du monde I",
+    "credits": 3
+  },
+  "SRS 1530": {
+    "name": "Athéisme : Une histoire du doute",
+    "credits": 3
+  },
+  "SRS 1591": {
+    "name": "Accommodements et conflits : Religion au Canada contemporain",
+    "credits": 3
+  },
+  "SRS 2111": {
+    "name": "Women and Religions",
+    "credits": 3
+  },
+  "SRS 2113": {
+    "name": "The Religions of the World II",
+    "credits": 3
+  },
+  "SRS 2114": {
+    "name": "Religion and Sexuality",
+    "credits": 3
+  },
+  "SRS 2115": {
+    "name": "Religious Ways of the Aboriginal Peoples",
+    "credits": 3
+  },
+  "SRS 2170": {
+    "name": "The World of the Hebrew Bible",
+    "credits": 3
+  },
+  "SRS 2172": {
+    "name": "Religion, Animals, Nature",
+    "credits": 3
+  },
+  "SRS 2191": {
+    "name": "Sociology of Religion",
+    "credits": 3
+  },
+  "SRS 2194": {
+    "name": "Anthropology of Religion",
+    "credits": 3
+  },
+  "SRS 2195": {
+    "name": "Religion and Politics in Global Society",
+    "credits": 3
+  },
+  "SRS 2351": {
+    "name": "Psychology of Religion",
+    "credits": 3
+  },
+  "SRS 2380": {
+    "name": "God's Warriors: Religion in the Middle Ages",
+    "credits": 3
+  },
+  "SRS 2382": {
+    "name": "The World of the New Testament",
+    "credits": 3
+  },
+  "SRS 2383": {
+    "name": "Religion in Late Antiquity",
+    "credits": 3
+  },
+  "SRS 2386": {
+    "name": "Religion in Canada from First Contact to Modern Challenges",
+    "credits": 3
+  },
+  "SRS 2393": {
+    "name": "Religion and Death",
+    "credits": 3
+  },
+  "SRS 2398": {
+    "name": "Religion and Health",
+    "credits": 3
+  },
+  "SRS 2511": {
+    "name": "Femmes et religions",
+    "credits": 3
+  },
+  "SRS 2513": {
+    "name": "Les religions du monde II",
+    "credits": 3
+  },
+  "SRS 2514": {
+    "name": "Religions et sexualité",
+    "credits": 3
+  },
+  "SRS 2515": {
+    "name": "Le religieux chez les peuples autochtones",
+    "credits": 3
+  },
+  "SRS 2570": {
+    "name": "Le monde de la Bible hébraïque",
+    "credits": 3
+  },
+  "SRS 2572": {
+    "name": "Religion, animaux, nature",
+    "credits": 3
+  },
+  "SRS 2591": {
+    "name": "Sociologie de la religion",
+    "credits": 3
+  },
+  "SRS 2594": {
+    "name": "Anthropologie de la religion",
+    "credits": 3
+  },
+  "SRS 2595": {
+    "name": "Religions et politique dans la société mondiale",
+    "credits": 3
+  },
+  "SRS 2751": {
+    "name": "Psychologie de la religion",
+    "credits": 3
+  },
+  "SRS 2780": {
+    "name": "Les Guerriers de Dieu : La religion au Moyen Âge",
+    "credits": 3
+  },
+  "SRS 2782": {
+    "name": "Le monde du Nouveau Testament",
+    "credits": 3
+  },
+  "SRS 2783": {
+    "name": "Religion dans l'Antiquité tardive",
+    "credits": 3
+  },
+  "SRS 2786": {
+    "name": "Religion au Canada lors des premiers contacts aux défis de la modernité",
+    "credits": 3
+  },
+  "SRS 2793": {
+    "name": "La religion et la mort",
+    "credits": 3
+  },
+  "SRS 2798": {
+    "name": "Religion et santé",
+    "credits": 3
+  },
+  "SRS 3100": {
+    "name": "Religion in a Digital Age",
+    "credits": 3
+  },
+  "SRS 3102": {
+    "name": "Method and Theory in the Study of Religion",
+    "credits": 3
+  },
+  "SRS 3110": {
+    "name": "Religion, Spirituality and Secularism in the Contemporary World",
+    "credits": 3
+  },
+  "SRS 3111": {
+    "name": "Aboriginal Myths and Philosophy",
+    "credits": 3
+  },
+  "SRS 3112": {
+    "name": "Sainthood and Heresy",
+    "credits": 3
+  },
+  "SRS 3113": {
+    "name": "Religion and Cinema",
+    "credits": 3
+  },
+  "SRS 3119": {
+    "name": "Shamanic Traditions",
+    "credits": 3
+  },
+  "SRS 3130": {
+    "name": "Pilgrimages, Healings, and Miracles",
+    "credits": 3
+  },
+  "SRS 3139": {
+    "name": "Native Peoples and Christianity",
+    "credits": 3
+  },
+  "SRS 3140": {
+    "name": "Religion, Art and Mythology",
+    "credits": 3
+  },
+  "SRS 3163": {
+    "name": "Women in Early Christianity",
+    "credits": 3
+  },
+  "SRS 3165": {
+    "name": "Gender and Religion",
+    "credits": 3
+  },
+  "SRS 3185": {
+    "name": "Jesus of Nazareth",
+    "credits": 3
+  },
+  "SRS 3187": {
+    "name": "The World of the Apocryphal Texts",
+    "credits": 3
+  },
+  "SRS 3190": {
+    "name": "Religion and Popular Culture",
+    "credits": 3
+  },
+  "SRS 3191": {
+    "name": "Religion and Globalization",
+    "credits": 3
+  },
+  "SRS 3194": {
+    "name": "Anthropological Theories in Inter-Cultural and Inter-Religious Issues",
+    "credits": 3
+  },
+  "SRS 3312": {
+    "name": "Hinduism",
+    "credits": 3
+  },
+  "SRS 3313": {
+    "name": "Buddhism",
+    "credits": 3
+  },
+  "SRS 3314": {
+    "name": "Judaism",
+    "credits": 3
+  },
+  "SRS 3315": {
+    "name": "Islam",
+    "credits": 3
+  },
+  "SRS 3317": {
+    "name": "Christianity",
+    "credits": 3
+  },
+  "SRS 3318": {
+    "name": "Religion in China and Japan",
+    "credits": 3
+  },
+  "SRS 3333": {
+    "name": "Religions of the Graeco-Roman World",
+    "credits": 3
+  },
+  "SRS 3353": {
+    "name": "Contemporary Issues in Psychology of Religion",
+    "credits": 3
+  },
+  "SRS 3354": {
+    "name": "Mysticism and Spiritual Experience",
+    "credits": 3
+  },
+  "SRS 3385": {
+    "name": "Religion and Multiculturalism in Canada",
+    "credits": 3
+  },
+  "SRS 3500": {
+    "name": "La religion à l'ère numérique",
+    "credits": 3
+  },
+  "SRS 3502": {
+    "name": "Méthodes et théories en sciences des religions",
+    "credits": 3
+  },
+  "SRS 3510": {
+    "name": "Religion, spiritualité et sécularisation dans le monde contemporain",
+    "credits": 3
+  },
+  "SRS 3511": {
+    "name": "Mythes et philosophies autochtone",
+    "credits": 3
+  },
+  "SRS 3512": {
+    "name": "Sainteté et hérésie",
+    "credits": 3
+  },
+  "SRS 3513": {
+    "name": "Religion et cinéma",
+    "credits": 3
+  },
+  "SRS 3519": {
+    "name": "Traditions chamaniques",
+    "credits": 3
+  },
+  "SRS 3530": {
+    "name": "Pèlerinages, guérisons et miracles",
+    "credits": 3
+  },
+  "SRS 3539": {
+    "name": "Les peuples autochtones et le christianisme",
+    "credits": 3
+  },
+  "SRS 3540": {
+    "name": "Religion, art et mythologies",
+    "credits": 3
+  },
+  "SRS 3563": {
+    "name": "Femme dans le christianisme des origines",
+    "credits": 3
+  },
+  "SRS 3565": {
+    "name": "Rapports sociaux de sexe et religion",
+    "credits": 3
+  },
+  "SRS 3585": {
+    "name": "Jésus de Nazareth",
+    "credits": 3
+  },
+  "SRS 3587": {
+    "name": "Le monde des textes apocryphes",
+    "credits": 3
+  },
+  "SRS 3590": {
+    "name": "Religion et culture populaire",
+    "credits": 3
+  },
+  "SRS 3591": {
+    "name": "Religion et mondialisation",
+    "credits": 3
+  },
+  "SRS 3594": {
+    "name": "Théories anthropologiques et problèmes interculturels et inter-religieux",
+    "credits": 3
+  },
+  "SRS 3712": {
+    "name": "L'hindouisme",
+    "credits": 3
+  },
+  "SRS 3713": {
+    "name": "Le bouddhisme",
+    "credits": 3
+  },
+  "SRS 3714": {
+    "name": "Le judaïsme",
+    "credits": 3
+  },
+  "SRS 3715": {
+    "name": "L'islam",
+    "credits": 3
+  },
+  "SRS 3717": {
+    "name": "Christianisme",
+    "credits": 3
+  },
+  "SRS 3718": {
+    "name": "La religion en Chine et au Japon",
+    "credits": 3
+  },
+  "SRS 3733": {
+    "name": "Religions du monde gréco-romain",
+    "credits": 3
+  },
+  "SRS 3753": {
+    "name": "Questions contemporaines en psychologie de la religion",
+    "credits": 3
+  },
+  "SRS 3754": {
+    "name": "Mysticisme et expérience spirituelle",
+    "credits": 3
+  },
+  "SRS 3785": {
+    "name": "Religion et multiculturalisme au Canada",
+    "credits": 3
+  },
+  "THE 1100": {
+    "name": "Introduction to the Practice of Theatre: Onstage",
+    "credits": 3
+  },
+  "THE 1101": {
+    "name": "Introduction to the Practice of Theatre: Backstage",
+    "credits": 3
+  },
+  "THE 1500": {
+    "name": "Introduction à la pratique théâtrale : Les métiers de la scène",
+    "credits": 3
+  },
+  "THE 1501": {
+    "name": "Introduction à la pratique théâtrale : Les métiers des coulisses",
+    "credits": 3
+  },
+  "TRA 1301": {
+    "name": "Introduction to Translation",
+    "credits": 3
+  },
+  "TRA 1501": {
+    "name": "Initiation à la traduction",
+    "credits": 3
+  },
+  "YDD 1901": {
+    "name": "Introduction à la langue et à la culture yiddish I / Introduction to the Yiddish Language and Culture I",
+    "credits": 3
+  },
+  "YDD 2104": {
+    "name": "Yiddish Literature and Film",
+    "credits": 3
+  },
+  "SED 1111": {
+    "name": ": Personal development and communications skills",
+    "credits": 3
+  },
+  "SED 1112": {
+    "name": ": Teamwork and communication skills",
+    "credits": 3
+  },
+  "SED 1113": {
+    "name": ": Introduction to engineering and its impact on society",
+    "credits": 3
+  },
+  "SED 1114": {
+    "name": ": Introduction to sustainability",
+    "credits": 3
+  },
+  "SED 1115": {
+    "name": ": Embedded programming and scripting",
+    "credits": 3
+  },
+  "SED 1116": {
+    "name": ": Data visualization and analytics",
+    "credits": 3
+  },
+  "EDU 1501": {
+    "name": "Introduction à l'enseignement",
+    "credits": 3
+  },
+  "EDU 2507": {
+    "name": "Réalités scolaire actuelles",
+    "credits": 3
+  },
+  "EDU 2508": {
+    "name": "La relation pédagogique",
+    "credits": 3
+  },
+  "EDU 3110": {
+    "name": "Selected Topics",
+    "credits": 3
+  },
+  "EDU 3505": {
+    "name": "La problématique de l’enseignement de la langue française en milieu minoritaire en Ontario",
+    "credits": 3
+  },
+  "EDU 3510": {
+    "name": "Thèmes choisis",
+    "credits": 3
+  },
+  "EDU 3705": {
+    "name": "École, famille et communauté",
+    "credits": 3
+  },
+  "APA 1522": {
+    "name": "L'activité physique dans une perspective de santé mondiale",
+    "credits": 3
+  },
+  "APA 2511": {
+    "name": "Théories de l'intervention",
+    "credits": 3
+  },
+  "APA 2702": {
+    "name": "Histoire du sport et de l'activité physique au Canada",
+    "credits": 3
+  },
+  "HSS 1101": {
+    "name": "Determinants of Health",
+    "credits": 3
+  },
+  "HSS 1501": {
+    "name": "Déterminants de la santé",
+    "credits": 3
+  },
+  "HSS 2121": {
+    "name": "History of Health Care",
+    "credits": 3
+  },
+  "HSS 2516": {
+    "name": "La santé des francophones en situation minoritaire",
+    "credits": 3
+  },
+  "LSR 1100": {
+    "name": "Introduction to Leisure Studies",
+    "credits": 3
+  },
+  "LSR 1105": {
+    "name": "Leisure in Canadian Society",
+    "credits": 3
+  },
+  "LSR 1500": {
+    "name": "Introduction à l'étude du loisir",
+    "credits": 3
+  },
+  "LSR 2518": {
+    "name": "Développement et évaluation de programmes récréatifs",
+    "credits": 3
+  },
+  "LSR 2521": {
+    "name": "Loisir et qualité de l'environnement",
+    "credits": 3
+  },
+  "LSR 2522": {
+    "name": "Tourisme",
+    "credits": 3
+  },
+  "NUT 1104": {
+    "name": "Food Sciences I",
+    "credits": 3
+  },
+  "NUT 1150": {
+    "name": "Food Psychology",
+    "credits": 3
+  },
+  "NUT 1304": {
+    "name": "Introduction to Nutrition",
+    "credits": 3
+  },
+  "NUT 1504": {
+    "name": "Sciences des aliments I",
+    "credits": 3
+  },
+  "NUT 1550": {
+    "name": "Psychologie de l’alimentation",
+    "credits": 3
+  },
+  "NUT 1704": {
+    "name": "Introduction à la nutrition",
+    "credits": 3
+  },
+  "DCC 2303": {
+    "name": "Legal Aspects of Human Rights",
+    "credits": 3
+  },
+  "DCC 2703": {
+    "name": "Dimensions juridiques des droits de la personne",
+    "credits": 3
+  },
+  "BIO 1300": {
+    "name": "The Human Animal",
+    "credits": 3
+  },
+  "BPS 1101": {
+    "name": "Drugs 101",
+    "credits": 3
+  },
+  "BPS 1501": {
+    "name": "Médicaments 101",
+    "credits": 3
+  },
+  "BPS 4102": {
+    "name": "Pharmaceuticals: Federal and International Regulations",
+    "credits": 3
+  },
+  "CHM 1301": {
+    "name": "Principles of Chemistry (equivalent to Chemistry 4U and CHM1311/1711)",
+    "credits": 3
+  },
+  "CHM 1701": {
+    "name": "Principes de chimie (équivalent à Chimie 4U et CHM1311/1711)",
+    "credits": 3
+  },
+  "GEO 1301": {
+    "name": "Earth: Natural Disasters Explained",
+    "credits": 3
+  },
+  "GEO 1701": {
+    "name": "Terre : les catastrophes naturelles expliquées",
+    "credits": 3
+  },
+  "MAT 1395": {
+    "name": "The Beauty of Mathematics",
+    "credits": 3
+  },
+  "PHY 1300": {
+    "name": "The Big Bang and Beyond",
+    "credits": 3
+  },
+  "PHY 1700": {
+    "name": "Au-delà du Big Bang",
+    "credits": 3
+  },
+  "STA 1391": {
+    "name": "Descriptive Statistics",
+    "credits": 3
+  },
+  "STA 1791": {
+    "name": "Statistique descriptive",
+    "credits": 3
+  },
+  "AFR 1100": {
+    "name": "Introduction to African Studies",
+    "credits": 3
+  },
+  "AFR 1500": {
+    "name": "Introduction aux études africaines",
+    "credits": 3
+  },
+  "ANT 1101": {
+    "name": "Social and Cultural Anthropology",
+    "credits": 3
+  },
+  "ANT 1501": {
+    "name": "Anthropologie sociale et culturelle",
+    "credits": 3
+  },
+  "CRM 1300": {
+    "name": "Introduction to Criminology",
+    "credits": 3
+  },
+  "CRM 1301": {
+    "name": "History of Criminological Thought",
+    "credits": 3
+  },
+  "CRM 1700": {
+    "name": "Introduction à la criminologie",
+    "credits": 3
+  },
+  "CRM 1701": {
+    "name": "Histoire du savoir criminologique",
+    "credits": 3
+  },
+  "DVM 1100": {
+    "name": "Canada and the Challenges of International Development and Globalization",
+    "credits": 3
+  },
+  "DVM 1300": {
+    "name": "Social Impact in Global Perspective",
+    "credits": 3
+  },
+  "DVM 1500": {
+    "name": "Le Canada face aux enjeux du développement international et de la mondialisation",
+    "credits": 3
+  },
+  "DVM 1700": {
+    "name": "Impact social dans une perspective globale",
+    "credits": 3
+  },
+  "ECH 1100": {
+    "name": "Introduction to the Study of Conflicts and Human Rights",
+    "credits": 3
+  },
+  "ECH 1101": {
+    "name": "War and Peace: Behind the Headlines",
+    "credits": 3
+  },
+  "ECH 1102": {
+    "name": "Forced Migration",
+    "credits": 3
+  },
+  "ECH 1500": {
+    "name": "Introduction à l’étude des conflits et droits humains",
+    "credits": 3
+  },
+  "ECH 1501": {
+    "name": "Guerre et paix : Derrière les grands titres",
+    "credits": 3
+  },
+  "ECH 1502": {
+    "name": "Migrations forcées",
+    "credits": 3
+  },
+  "ECO 1102": {
+    "name": "Introduction to Macroeconomics",
+    "credits": 3
+  },
+  "ECO 1103": {
+    "name": "Economic Issues of Indigenous Peoples",
+    "credits": 3
+  },
+  "ECO 1104": {
+    "name": "Introduction to Microeconomics",
+    "credits": 3
+  },
+  "ECO 1502": {
+    "name": "Introduction à la macroéconomie",
+    "credits": 3
+  },
+  "ECO 1503": {
+    "name": "Enjeux économiques des peuples autochtones",
+    "credits": 3
+  },
+  "ECO 1504": {
+    "name": "Introduction à la microéconomie",
+    "credits": 3
+  },
+  "FEM 1100": {
+    "name": "Women, Gender, Feminism: An Introduction",
+    "credits": 3
+  },
+  "FEM 1500": {
+    "name": "Femmes, genre, féminisme : une introduction",
+    "credits": 3
+  },
+  "PAP 1301": {
+    "name": "Governance in Contemporary Societies",
+    "credits": 3
+  },
+  "PAP 1701": {
+    "name": "La gouverne dans les sociétés contemporaines",
+    "credits": 3
+  },
+  "POL 1101": {
+    "name": "Introduction to Political Science",
+    "credits": 3
+  },
+  "POL 1102": {
+    "name": "Politics and Globalization",
+    "credits": 3
+  },
+  "POL 1501": {
+    "name": "Introduction à la science politique",
+    "credits": 3
+  },
+  "POL 1502": {
+    "name": "Politique et mondialisation",
+    "credits": 3
+  },
+  "PSY 1101": {
+    "name": "Introduction to Psychology: Foundations",
+    "credits": 3
+  },
+  "PSY 1102": {
+    "name": "Introduction to Psychology: Applications",
+    "credits": 3
+  },
+  "PSY 1501": {
+    "name": "Introduction à la psychologie : fondements",
+    "credits": 3
+  },
+  "PSY 1502": {
+    "name": "Introduction à la psychologie : applications",
+    "credits": 3
+  },
+  "SOC 1101": {
+    "name": "Principles of Sociology",
+    "credits": 3
+  },
+  "SOC 1104": {
+    "name": "Sociology: Big Questions",
+    "credits": 3
+  },
+  "SOC 1106": {
+    "name": "Exploring Diversity in Canada",
+    "credits": 3
+  },
+  "SOC 1301": {
+    "name": "Building Sociological Reasoning",
+    "credits": 3
+  },
+  "SOC 1501": {
+    "name": "Éléments de sociologie",
+    "credits": 3
+  },
+  "SOC 1504": {
+    "name": "Sociologie : grandes questions",
+    "credits": 3
+  },
+  "SOC 1506": {
+    "name": "Explorer la diversité au Canada",
+    "credits": 3
+  },
+  "SOC 1701": {
+    "name": "Construire le raisonnement sociologique",
+    "credits": 3
+  },
+  "SOC 2102": {
+    "name": "Sociology of Food and Eating",
+    "credits": 3
+  },
+  "SOC 2191": {
+    "name": "Sociology of Religion",
+    "credits": 3
+  },
+  "SOC 2502": {
+    "name": "Sociologie de l'alimentation",
+    "credits": 3
+  },
+  "SOC 2591": {
+    "name": "Sociologie de la religion",
+    "credits": 3
+  },
+  "TSO 1500": {
+    "name": "Introduction au travail social",
+    "credits": 3
+  },
+  "TSO 1501": {
+    "name": "Diversité et travail social",
+    "credits": 3
+  },
+  "ADM 1100": {
+    "name": "Introduction to Business",
+    "credits": 3
+  },
+  "ADM 1101": {
+    "name": "Business and Society",
+    "credits": 3
+  },
+  "ADM 1500": {
+    "name": "Introduction à la gestion",
+    "credits": 3
+  },
+  "ADM 1501": {
+    "name": "Gestion et société",
+    "credits": 3
+  }
+}

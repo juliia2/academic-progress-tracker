@@ -82,17 +82,7 @@ export default function DashboardPage() {
   return (
     <div className="min-h-screen bg-slate-50">
       <div className="mx-auto max-w-6xl px-6 py-10">
-        <DashboardHeader />
-
-        {/* Reset button */}
-        <div className="mt-4">
-          <button
-            onClick={resetAll}
-            className="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
-          >
-            Reset All Data
-          </button>
-        </div>
+        <DashboardHeader onReset={resetAll} />
 
         {refreshing && (
           <div className="mt-3 text-xs text-slate-500">Updating…</div>
@@ -116,6 +106,7 @@ export default function DashboardPage() {
             <div className="h-full w-full">
               <CourseActionsCard
                 availableCourses={ui.availableCourses || []}
+                inProgressCourses={ui.inProgressCourses || []}
                 completedCourses={ui.completedCourses || []}
                 onUpdated={() => load({ silent: true })}
               />

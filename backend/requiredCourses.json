@@ -1,0 +1,170 @@
+{
+  "ITI 1120": {
+    "name": "Introduction to Computing I",
+    "credits": 3
+  },
+  "MAT 1320": {
+    "name": "Calculus I",
+    "credits": 3
+  },
+  "MAT 1341": {
+    "name": "Introduction to Linear Algebra",
+    "credits": 3
+  },
+  "ITI 1100": {
+    "name": "Digital Systems I",
+    "credits": 3
+  },
+  "ITI 1121": {
+    "name": "Introduction to Computing II",
+    "credits": 3
+  },
+  "MAT 1322": {
+    "name": "Calculus II",
+    "credits": 3
+  },
+  "MAT 1348": {
+    "name": "Discrete Mathematics for Computing",
+    "credits": 3
+  },
+  "CEG 2136": {
+    "name": "Computer Architecture I",
+    "credits": 3
+  },
+  "CSI 2110": {
+    "name": "Data Structures and Algorithms",
+    "credits": 3
+  },
+  "ENG 1112": {
+    "name": "Technical Report Writing",
+    "credits": 3
+  },
+  "SEG 2105": {
+    "name": "Introduction to Software Engineering",
+    "credits": 3
+  },
+  "CSI 2101": {
+    "name": "Discrete Structures",
+    "credits": 3
+  },
+  "CSI 2120": {
+    "name": "Programming Paradigms",
+    "credits": 3
+  },
+  "CSI 2132": {
+    "name": "Databases I",
+    "credits": 3
+  },
+  "STA 2391": {
+    "name": "Probability and Statistics for Engineers",
+    "credits": 3
+  },
+  "CSI 2911": {
+    "name": "Professional Practice in Computing",
+    "credits": 3
+  },
+  "CSI 3105": {
+    "name": "Design and Analysis of Algorithms I",
+    "credits": 3
+  },
+  "CSI 3120": {
+    "name": "Programming Language Concepts",
+    "credits": 3
+  },
+  "CSI 3104": {
+    "name": "Introduction to Formal Languages",
+    "credits": 3
+  },
+  "CSI 3131": {
+    "name": "Operating systems",
+    "credits": 3
+  },
+  "CSI 3140": {
+    "name": "WWW Structures, Techniques and Standard",
+    "credits": 3
+  },
+  "CEG 3185": {
+    "name": "Introduction to Data Communications and Networking",
+    "credits": 3
+  },
+  "CSI 2372": {
+    "name": "Advanced Programming Concepts with C++",
+    "credits": 3
+  },
+  "CSI 4900": {
+    "name": "Honours Project",
+    "credits": 6
+  },
+  "ADM 1100": {
+    "name": "Introduction to Business Management",
+    "credits": 3
+  },
+  "ADM 2320": {
+    "name": "Marketing",
+    "credits": 3
+  },
+  "ADM 1340": {
+    "name": "Financial Accounting",
+    "credits": 3
+  },
+  "ADM 3313": {
+    "name": "New Venture Creation",
+    "credits": 3
+  },
+  "CSI 3130": {
+    "name": "Databases II",
+    "credits": 3
+  },
+  "CSI 4142": {
+    "name": "Introduction to Data Science",
+    "credits": 3
+  },
+  "MAT 2122": {
+    "name": "Multivariable Calculus",
+    "credits": 3
+  },
+  "MAT 2141": {
+    "name": "Linear Algebra I",
+    "credits": 3
+  },
+  "MAT 2371": {
+    "name": "Introduction to Probability",
+    "credits": 3
+  },
+  "MAT 2125": {
+    "name": "Elementary Real Analysis",
+    "credits": 3
+  },
+  "MAT 2143": {
+    "name": "Algebraic Structures",
+    "credits": 3
+  },
+  "STA 2100": {
+    "name": "Introduction to Statistics",
+    "credits": 3
+  },
+  "MAT 2375": {
+    "name": "Introduction to Statistics",
+    "credits": 3
+  },
+  "MAT 1330": {
+    "name": "Calculus for the Life Sciences I",
+    "credits": 3
+  },
+  "MAT 1332": {
+    "name": "Calculus for the Life Sciences II",
+    "credits": 3
+  },
+  "CSI 4130": {
+    "name": "Computer Graphics",
+    "credits": 3
+  },
+  "SEG 3101": {
+    "name": "Software Requirements Analysis",
+    "credits": 3
+  },
+  "SEG 3125": {
+    "name": "Analysis and Design of User Interfaces",
+    "credits": 3
+  }
+}

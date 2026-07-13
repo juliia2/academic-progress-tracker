@@ -27,6 +27,7 @@ from fastapi import Request
 
 app = FastAPI()
 
+import json
 
 # allow React dev server to access FastAPI
 '''app.add_middleware(
@@ -67,45 +68,15 @@ user_data = {}
 #HARDCODING FOR DEMO
 
 # Course catalog mapping
-COURSE_CATALOG = {
-    'ENG 1112': {'name': 'Technical Report Writing', 'credits': 3},
-    'ITI 1100': {'name': 'Digital Systems I', 'credits': 3},
-    'ITI 1120': {'name': 'Introduction to Computing I', 'credits': 3},
-    'ITI 1121': {'name': 'Introduction to Computing II', 'credits': 3},
-    'MAT 1320': {'name': 'Calculus I', 'credits': 3},
-    'MAT 1322': {'name': 'Calculus II', 'credits': 3},
-    'MAT 1341': {'name': 'Introduction to Linear Algebra', 'credits': 3},
-    'MAT 1348': {'name': 'Discrete Mathematics for Computing', 'credits': 3},
-    'CEG 2136': {'name': 'Computer Architecture I', 'credits': 3},
-    'CSI 2101': {'name': 'Discrete Structures', 'credits': 3},
-    'CSI 2110': {'name': 'Data Structures and Algorithms', 'credits': 3},
-    'CSI 2120': {'name': 'Programming Paradigms', 'credits': 3},
-    'CSI 2132': {'name': 'Databases I', 'credits': 3},
-    'CSI 2911': {'name': 'Professional Practice in Computing', 'credits': 3},
-    'MAT 2377': {'name': 'Probability and Statistics for Engineers', 'credits': 3},
-    'SEG 2105': {'name': 'Introduction to Software Engineering', 'credits': 3},
-    'CSI 3104': {'name': 'Introduction to Formal Languages', 'credits': 3},
-    'CSI 3105': {'name': 'Design and Analysis of Algorithms I', 'credits': 3},
-    'CSI 3120': {'name': 'Programming Language Concepts', 'credits': 3},
-    'CSI 3131': {'name': 'Operating Systems', 'credits': 3},
-    'CSI 3140': {'name': 'WWW Structures, Techniques and Standards', 'credits': 3},
-    'CEG 3185': {'name': 'Introduction to Data Communications and Networking', 'credits': 3},
-    'CSI 4900': {'name': 'Computer Science Project', 'credits': 6},
-}
+with open("requiredCourses.json", "r", encoding="utf-8") as f:
+    COURSE_CATALOG = json.load(f)
 
-required_courses=['ENG 1112', 'ITI 1100', 'ITI 1120', 
-                  'ITI 1121', 'MAT 1320', 'MAT 1322', 
-                  'MAT 1341', 'MAT 1348', 'CEG 2136', 
-                  'CSI 2101', 'CSI 2110', 'CSI 2120', 
-                  'CSI 2132', 'CSI 2911', 'MAT 2377', 
-                  'SEG 2105', 'CSI 3104', 'CSI 3105', 
-                  'CSI 3120', 'CSI 3131', 'CSI 3140', 
-                  'CEG 3185', 'CSI 4900']
+required_courses=COURSE_CATALOG.keys()
 
-required_courses_units = len(required_courses) *3  # assuming each course is 3 units
-requirements_EXAMPLE = {
-    "completed": [required_courses[0]], ## 
-    "in_progress": [required_courses[1]], }
+# required_courses_units = len(required_courses) *3  # assuming each course is 3 units
+# requirements_EXAMPLE = {
+#     "completed": [required_courses[0]], ## 
+#     "in_progress": [required_courses[1]], }
 
 requirements = {
     "completed": [],
@@ -124,6 +95,7 @@ degree_requirements is declarative data.
 NO business logic should live here.
 Evaluation logic will consume this structure.
 """
+required_courses_units = len(required_courses) * 3  # assuming each course is 3 units
 
 degree_requirements = [
     {
@@ -225,7 +197,7 @@ def get_all_data(requirements, course_grades):
         "to_do": compute_todo(requirements),
         "course_grades": course_grades,
         "cgpa": calculate_cgpa(course_grades),
-        "electives": requirements["electives"],  # ✅ user-added electives
+        "electives": requirements["electives"],  
     }
 
 
@@ -429,12 +401,9 @@ def api_get_dashboard(request: Request):
     # in-progress credits
     in_progress_credits = len(in_progress) * creditsPerCourse
 
-    # make electives appear in dropdown
     todo_required = compute_todo(requirements)
-    availableCourses = [
-        c for c in (todo_required + elective_codes)
-        if c not in completed and c not in in_progress
-    ]
+    # Only required courses go in the dropdown — electives use the search bar
+    availableCourses = todo_required
 
     requirementsBreakdown = [
         {
@@ -513,6 +482,23 @@ def api_add_in_progress(payload: CoursePayload, request: Request):
 # @app.get("/api/cgpa")
 # def api_get_cgpa():
 #     return {"cgpa": calculate_cgpa(course_grades)}
+
+@app.post("/api/remove_in_progress")
+def api_remove_in_progress(payload: CoursePayload, request: Request):
+    user_id = request.headers.get("x-user-id")
+    if not user_id:
+        return JSONResponse(content={"error": "Missing user ID"}, status_code=400)
+
+    data_store = get_user_data(user_id)
+    requirements = data_store["requirements"]
+
+    course = payload.course
+    # Remove from in_progress and electives if present
+    if course in requirements["in_progress"]:
+        requirements["in_progress"].remove(course)
+    requirements["electives"] = [e for e in requirements["electives"] if e["code"] != course]
+
+    return {"status": "ok"}
 
 @app.post("/api/add_grade")
 def api_add_grade(payload: GradePayload, request: Request):
